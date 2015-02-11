@@ -1,0 +1,11 @@
+== To be defined ==
+
+* How to handle compiled bytecode.
+* Handle compatibility issues between rockspecs and LuaRocks
+
+== To be implemented ==
+
+* Roll back dependencies in case of missing external (or unsatisfiable internal) dependencies (or even better, check them all beforehand and don't install dependencies at all in those cases, also respecting the use of source vs. binary rocks.)
+* luarocks run command as mentioned [http://lists.luaforge.net/pipermail/luarocks-developers/2007-July/000131.html here]
+* Auto-updates while keeping dependent packages in the repository
+* Better support for distributing more files from a package, such as docs, samples, tests (perhaps allowing an installed rock to store the whole source package, as suggested by Fabio Mascarenhas).

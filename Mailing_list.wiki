@@ -1,0 +1,2 @@
+Both users and developers are invited to join the [https://lists.sourceforge.net/lists/listinfo/luarocks-developers luarocks-developers mailing list]. The list name is a bit misleading, but the notion of "user" and "developer" is somewhat blurry, since both Lua module developers are target users of LuaRocks, as well as Lua developers who are users of Lua modules. In short, everyone is welcome to join the list and discuss all things LuaRocks.
+

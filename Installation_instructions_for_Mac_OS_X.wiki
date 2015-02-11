@@ -1,0 +1,21 @@
+LuaRocks is a command-line tool. You can install LuaRocks using one of the third-party package managers available for OS X, or you may install it manually, in the Unix way.
+
+== Option 1: using Homebrew ==
+
+One option is to use [https://github.com/mxcl/homebrew Homebrew]. If you don't have it installed, follow its [https://github.com/mxcl/homebrew/wiki/installation installation instructions].
+
+If you already have it installed, make sure it is up to date so you pick the most recent version of LuaRocks:
+
+   brew update
+
+and then install LuaRocks with:
+
+   brew install luarocks
+
+== Option 2: installing it manually ==
+
+If you do not wish to use a package management tool to install LuaRocks, you can install it on OS X as you would do in any other Unix system. Download the Unix tarball and then follow the [[Installation_instructions_for_Unix.wiki|installation instructions for Unix]] to install it to /usr/local.
+
+== Next steps ==
+
+Once LuaRocks is installed, learn more about [[Using_LuaRocks.wiki|using LuaRocks]].

@@ -1,0 +1,3 @@
+* [http://luaforge.net LuaForge.net] - provides hosting and services for Lua projects (<b>deprecated</b>).
+* [http://www.keplerproject.org Kepler Project] - a web development platform for Lua. LuaRocks is developed as part of the Kepler Project.
+* [http://luadist.sf.net LuaDist] - a source-based Lua distribution using cmake. It uses LuaRocks for module deployment.

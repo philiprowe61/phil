@@ -1,0 +1,27 @@
+== Requirements ==
+
+LuaRocks is a pure Lua application with no library dependencies. Its current release depends on some helper tools, but you shouldn't worry about them, as they are shipped by default on most Unix systems: LuaRocks requires as a basic Unix toolchain, zip, unzip and either [http://www.gnu.org/software/wget/ wget] (default on most Linux systems) or [http://curl.haxx.se/ curl] (default on Mac OSX). For Windows, these helper tools are provided by the [http://unxutils.sf.net/ UnxUtils] project; the all-in-one Windows package already includes them, as a convenience.
+
+== Downloading ==
+
+Download LuaRocks [http://luarocks.org/releases here].
+
+Current release is '''2.2.0''': see the [[Release_history.wiki|release history]].
+
+== Installing ==
+
+* [[Installation_instructions_for_Unix.wiki|Installation instructions for Unix]] (Linux, BSDs, etc.)
+* [[Installation_instructions_for_Mac_OS_X.wiki|Installation instructions for Mac OS X]]
+* [[Installation_instructions_for_Windows.wiki|Installation instructions for Windows]]
+
+== The bleeding edge ==
+
+Development is done using Git, hosted at github.com:
+
+To get the latest development sources, run:
+
+ git clone git://github.com/keplerproject/luarocks.git
+
+There is also a web interface available at:
+
+* [http://github.com/keplerproject/luarocks]

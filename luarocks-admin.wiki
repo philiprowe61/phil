@@ -1,0 +1,13 @@
+'''luarocks-admin''' is the repository management tool for LuaRocks, a module deployment system for Lua.
+
+== Usage ==
+
+:'''luarocks-admin ''command'' <nowiki>[</nowiki>''arguments''<nowiki>]</nowiki>...'''
+
+== Supported commands ==
+
+* [[help.wiki|help]] - Help on commands.
+* [[make-manifest.wiki|make-manifest]] - Compile a manifest file for a repository.
+* [[add.wiki|add]] - Add a rock or rockspec to a rocks server.
+* [[remove_(luarocks-admin).wiki|remove]] - Remove a rock or rockspec from a rocks server.
+* [[refresh-cache.wiki|refresh-cache]] - Refresh local cache of a remote rocks server.

@@ -1,0 +1,11 @@
+'''install''' - Download a specific rock or rockspec file from a rocks server.
+
+== Usage ==
+
+:'''[[luarocks.wiki|luarocks]] download <nowiki>[</nowiki>--all<nowiki>]</nowiki> <nowiki>[</nowiki>--source<nowiki>]</nowiki> <nowiki>[</nowiki>--rockspec<nowiki>]</nowiki> <nowiki>[</nowiki>--arch=''arch''<nowiki>]</nowiki> <nowiki>[</nowiki>''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki><nowiki>]</nowiki>'''
+
+Argument may be the name of a rock to be fetched from a server or a filename of a locally available rock. In case of more than one rock matching the request, the "install" command favors binary rocks.
+
+== Example ==
+
+ luarocks download --rockspec lpeg

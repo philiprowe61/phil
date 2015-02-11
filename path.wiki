@@ -1,0 +1,18 @@
+'''path''' - Return the currently configured package path.
+
+== Usage ==
+
+:'''[[luarocks.wiki|luarocks]] path <nowiki>[</nowiki>--bin<nowiki>]</nowiki>'''
+
+Returns the package path currently configured for this installation
+of LuaRocks, formatted as shell commands to update LUA_PATH and
+LUA_CPATH. (On Unix systems, you may run: eval `luarocks path`)
+
+Passing the --bin variable it also exports the PATH variable, including
+the path to the directories where command-line scripts provided by rocks
+are located.
+
+== Example ==
+
+ luarocks path
+

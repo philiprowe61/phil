@@ -1,0 +1,110 @@
+The LuaRocks build system is based on a simple "configure" script and a
+Makefile, so the traditional 3-step "configure", "make", "make install"
+process works as expected. The "configure" script offers some flags
+that are useful for different models of use of LuaRocks. Run <tt>./configure --help</tt>
+for details.
+
+== Quick start ==
+
+To get a default installation of Lua and LuaRocks under /usr/local:
+
+* Install Lua, using the appropriate methods for your system.
+* Download and unpack the LuaRocks tarball.
+* Run "./configure". (This will attempt to detect your installation of Lua. If you get any error messages, see the section "Customizing your settings", below.)
+* Run "make".
+* As superuser, run "make install".
+
+== The default settings ==
+
+The default settings are suitable for installing LuaRocks globally
+in your system while allowing both system-wide and per-user sets of rocks.
+User accounts will be able to install their own rocks in their $HOME
+directory, and the superuser can install rocks that will be available
+for everyone.
+
+By default LuaRocks will install itself in /usr/local, like Lua, and
+will use /usr/local/etc/luarocks/config.lua as a default path for the configuration
+file. The default system-wide rocks trees is configured as /usr/local/lib/luarocks,
+and per-user rocks install at $HOME/.luarocks/rocks/.
+Command-line scripts provided by rocks will be installed in 
+/usr/local/lib/luarocks/bin/ or $HOME/.luarocks/bin/, respectively. The user
+may then add these directories to their $PATH variable.
+
+== Customizing your settings ==
+
+All paths described above can be overridden with flags in the "configure" script,
+or entries in the configuration file.
+
+{| cellpadding=5px
+| --prefix=DIR || Prefix where LuaRocks should be installed. Default is /usr/local
+|--------------------------------------------------------------------------------
+| --sysconfdir=DIR || Location where the config file should be installed. Default is $PREFIX/etc/luarocks
+|--------------------------------------------------------------------------------
+| --rocks-tree=FILE || Root of the local tree of installed rocks. Default is $PREFIX/lib/luarocks
+|--------------------------------------------------------------------------------
+| --scripts-dir=DIR || Where to install scripts installed by rocks. Default is $ROCKS_TREE/bin. Use this if you want to modify it so that rocks install scripts somewhere else (possibly somewhere in your $PATH), but if you use a system path such as /usr/bin, beware of clashes between files installed by LuaRocks and by your system's package manager. Example: /usr/local/bin. **Note**: I believe `--scripts-dir` flag was removed from 2.0.1 version. -- DanilKutkevich 2010-04-15 14:51 UTC
+|--------------------------------------------------------------------------------
+| --lua-suffix=SUFFIX || Versioning suffix to use in Lua filenames. Default is "" (lua...)
+|--------------------------------------------------------------------------------
+| --lua-version=VERSION || Use specific Lua version: 5.1 or 5.2. Default is "5.1"
+|--------------------------------------------------------------------------------
+| --with-lua=PREFIX || Use Lua from given prefix. Default is /usr
+|--------------------------------------------------------------------------------
+| --with-lua-include=DIR || You can also specify Lua's includes dir. Default is $LUA_DIR/include
+|--------------------------------------------------------------------------------
+| --with-lua-lib=DIR || You can also specify Lua's libraries dir. Default is $LUA_DIR/lib
+|--------------------------------------------------------------------------------
+| --with-downloader=TOOL || Which tool to use as a downloader. Valid options are: wget, curl. Default is to auto-detect.
+|--------------------------------------------------------------------------------
+| --with-md5-checker=TOOL || Which tool to use as a download checker. Valid options are: md5sum, openssl. Default is to auto-detect.
+|--------------------------------------------------------------------------------
+| --versioned-rocks-dir || Use a versioned rocks dir, such as $PREFIX/lib/luarocks/rocks-5.1/. Default is to auto-detect the necessity.
+|--------------------------------------------------------------------------------
+| --force-config || Use a single config location. Do not use the $LUAROCKS_CONFIG variable or the user's home directory. Useful to avoid conflicts when LuaRocks is embedded within an application.
+|}
+
+After installation, a default config file called config.lua will be installed at the directory defined by --sysconfdir. For further configuration of LuaRocks paths, see the [[Config_file_format.wiki|Config file format]].
+
+== Making a self-contained installation ==
+
+Another option is to install LuaRocks in a self-contained manner. This
+is an interesting alternative when shipping an application which uses
+third-party modules. Bundling them as rocks reduces maintenance overhead
+and allows the user to perform updates.
+
+In this scenario, it is not desired to have the user's (or the system's)
+configuration affect the self-contained LuaRocks install, in case the 
+user or the system also have different LuaRocks installations. For this
+reason, the "configure" script allows to hardcode the location of a
+configuration file. For example, the compilation process of a package
+bundling LuaRocks could do something like this:
+
+ export PREFIX=$HOME/mypackage/
+ ./configure --prefix=$PREFIX --sysconfdir=$PREFIX/luarocks --force-config
+
+The copy of LuaRocks installed in $HOME/mypackage/ will ignore
+customization schemes such as the $LUAROCKS_CONFIG environment variable
+and will only use $HOME/mypackage/luarocks/config.lua.
+
+An interesting option in those cases is for the application to provide
+in its configuration file an URL for their own rocks repository, so they
+can have control over updates to be performed. Continuing the previous
+example, the config.lua file could contain something like this:
+
+ rocks_servers = {
+    "http://www.luarocks.org/repositories/rocks/"
+ }
+
+only with the URL replaced by a rocks tree in your own website.
+
+== Differently named Lua interpreters (e.g. LuaBinaries) ==
+
+To use LuaRocks with the LuaBinaries distribution, pass the option
+--lua-suffix=5.1 to "configure". This adds the given suffix to the 
+default value of <code>lua_interpreter</code> in the configuration file.
+If you want to use an alternative name to the interpreter, you can set
+that variable in your configuration file directly.
+
+== Next steps ==
+
+Once LuaRocks is installed, learn more about [[Using_LuaRocks.wiki|using LuaRocks]].

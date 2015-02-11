@@ -1,0 +1,33 @@
+Did you look for something in the documentation and could not find it? Maybe it's there and hidden in some obscure place, and maybe it just wasn't written yet. In any case, let us know, so we can work on improving the docs. This page is the documentation "comments and suggestions box". Feel free to write down any perceived omissions in the documentation in this page, and we'll work on improving it. Thank you!
+
+----
+
+''Add your feedback here!''
+---
+yes, we need much better documentation on uninstall, version conflicts, and fixing the registry/manifest AFTER you've forcibly removed a rock directory in the file system
+---
+
+From Alvaro Martínez (alvaro.mtr_at_gmail.com)
+
+is there an uninstall method?
+it would be nice if the unix man page or command-line invocation were on the site.
+
+---
+
+From Vladimir Stebunov (vstebunov_at_gmail.com)
+
+how to work with proxy server&
+
+---
+
+From ionous (dev.ionous.net)
+
+I'm a new(ish) lua user. I'd successfully extended lua by embedding lua in my c code, but I wanted to reverse things, and make my code a rock. I followed [[Creating_a_rock.wiki|Creating a rock]], but it took me a bit to make it all work.
+
+It wasn't initially clear to me I needed a luaopen_<module name> function, and that the dll(s) would be named after the module(s) not the package. ( My original registration function had been PascalCase because I didn't realize there was a standard convention. ) It all makes sense now that I've made the connection between the concept of a "lua module" and the "module" section of the rockspec, but that didn't happen automatically for me because I'm still so new to lua. "module" to me in the rocks docs seemed like just an arbitrary useful division of the rockspec into subparts.
+
+A link to some external documentation about the module convention, and an explanation about the c functions luarocks needs (one "luaopen_<module>" per module?) would help a lot. 
+
+Unrelated, but: a brief note for visual studio users might be useful. When I first ran luarocks it complained about not finding the compiler. The "Visual Studio Command Prompt" ( which is part of the visual studio installation ) sets up all the paths needed for command line compiles -- but, maybe not everybody knows that, especially folks used to the IDE.
+
+Many thanks for lua rocks. It's a great system!

@@ -1,0 +1,50 @@
+== Deployment systems ==
+
+Language-oriented deployment systems: this is the category LuaRocks fits in.
+
+=== Ruby ===
+
+* [http://rubygems.org/ RubyGems] is the ''"premier ruby packaging system"''. It defines a package format and automated download and installation of Ruby modules from remote servers, as well as handling module versioning.
+
+=== Perl ===
+
+* [http://www.cpan.org CPAN], the Comprehensive Perl Archive Network, features a standard Perl module, [http://search.cpan.org/~jhi/perl-5.8.0/lib/CPAN.pm CPAN.pm], which automates download and installation of Perl modules from CPAN.
+
+=== Python ===
+
+* [http://www.python.org/pypi Python Cheese Shop] is Python's answer to CPAN; a repository of Python modules. [http://cheeseshop.python.org/pypi/setuptools SetupTools] and [http://peak.telecommunity.com/DevCenter/EasyInstall EasyInstall] are Python's answer to RubyGems; a tool for downloading and installing Python modules in an automated manner.
+
+== Build systems ==
+
+Generic build systems can, of course, build projects written in any language regardless of the language they are written in, but language-specific build systems often offer useful features streamlining the compilation and installation of modules.
+
+=== Lua ===
+
+* [http://kotisivu.dnainternet.net/askok/hamster/ Hamster] is a Makefile-generator for Lua inspired in [http://www.scons.org/ scons]. It can generate Makefiles for GNU make and nmake, as well as scons project files.
+* [http://luaforge.net/projects/luaibs LuaIBS] is a make-replacement written in Lua and C. Is uses LuaFileSystem to perform file operations. Supports Unix and Windows, but has a compile-time option.
+* [http://luaforge.net/projects/meique Meique] is a make-replacement written in C++ with Lua embedded as a scripting language. 
+
+=== Ruby ===
+
+* [http://docs.rubyrake.org/ Rake] is a build system for Ruby. ''"Rake is similar to make in scope and purpose."''
+* Ruby's current de facto standard for building external modules is [http://www.onlamp.com/pub/a/onlamp/2004/11/18/extending_ruby.html mkmf] -- it is quite magical.
+* [http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/branches/ruby_1_8/lib/mkmf.rb?view=markup mkmf source code] - support for multiple platforms seems too monolithic
+* [http://mkmf2.rubyforge.org/ mkmf2] - an alternative to mkmf, pointing out some of is limitations
+* [http://mkrf.rubyforge.org/ mkrf] is a Rakefile generator, created as a Google Summer of Code project. Its cross-platform abilities don't  seem [http://glu.ttono.us/articles/2006/06/28/mkrf-0-1-0-released too transparent], though.
+
+=== Python ===
+
+* In the Python world, the blessed standard is still [http://docs.python.org/dist/dist.html distutils]. Like Rake, it also does the entire work (serves as a Make replacement). In typical Python fashion, it is packed with features.
+* Given the amount of if's we had to add to the recipe_type=python section of [http://cvs.savannah.nongnu.org/viewcvs/tools/Compile/bin/Compile?root=goboscripts&view=markup GoboLinux Compile], its use doesn't seem too standardized.
+* An alternative in the Python community is [http://www.scons.org/ scons].
+
+=== Perl ===
+
+* In the Perl world, extensions use [http://www.perl.com/doc/manual/html/pod/perlxs.html XS] and its use is quite standardized. Looking at [http://www.cpan.org CPAN modules], basically everybody uses ExtUtils and its Makefile.PL, a Makefile generator.
+* [http://perldoc.perl.org/ExtUtils/MakeMaker.html ExtUtils::MakeMaker] is the module that does this job.
+* It also [http://search.cpan.org/src/MSCHWERN/ExtUtils-MakeMaker-6.32/README works on Windows], with nmake.
+* [http://www.makemaker.org/ makemaker.org] - another resource for MakeMaker-related stuff.
+* [http://search.cpan.org/~kwilliams/Module-Build-0.2807/lib/Module/Build.pm Module::Build] was an attempt to overthrow MakeMaker, dating back to 2003, but it didn't seem to succeed. 
+* Some interesting quotes about the importance of a de facto standard build system: ''"The ExtUtils::MakeMaker module, along with the h2xs script, has been a huge boon to the Perl community"'' ... ''"ExtUtils-MakeMaker is a huge part of what makes PAUSE and CPAN possible"'' - [http://www.perl.com/pub/a/2003/02/12/module1.html]
+* Of course, there is also the father of SCons, [http://www.dsmit.com/cons/ Cons], which is written in Perl but seems to be dead.
+

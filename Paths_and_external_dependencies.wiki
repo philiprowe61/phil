@@ -1,0 +1,13 @@
+When writing rocks, care should be taken so that they do not install into hardcoded paths. To allow this, the '''build''' section of a [[Rockspec_format.wiki|rockspec]] should make use of path variables instead of referring to fixed paths, and paths set by the module's own build system must not be relied on, and explicit paths should be passed to it by the rockspec instead.
+
+
+
+
+
+These path variables are set in the global '''variables''' table defined in the [[Config_file_format.wiki|config file]]. Their values are populated automatically by LuaRocks, but can be overriden by the user (either by setting them directly in the config file, or by passing them through the "luarocks" command line). 
+
+Paths where LuaRocks should install files into are defined as the '''PREFIX''', '''LUADIR''', '''LIBDIR''', '''BINDIR''' and '''CONFDIR''' variables. (See the [[Config_file_format.wiki|Config file format]] page for details.)
+
+Paths for external dependencies (such as C libraries used in the compilation of modules) are generated from the '''external_dependencies''' section of the rockspec (see the [[Rockspec_format.wiki|Rockspec format]] page for details.) Lua itself is considered a special external dependency. The '''variables''' table always contains entries for LUA_BINDIR, LUA_INCDIR and LUA_LIBDIR. Like the other external dependency variables, these can be overriden in the luarocks config file or in the command line.
+
+When installing, you can set default values for the Lua paths by using the <tt>--with-lua</tt> flag in configure on Unix, or /LUA in INSTALL.BAT on Windows. This will adjust the values of LuaRocks' LUA_* variables according to the given configuration.
