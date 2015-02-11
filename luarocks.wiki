@@ -4,7 +4,7 @@
 
 :'''luarocks <nowiki>[</nowiki>--server=''server'' | --only-server=''server''<nowiki>]</nowiki> <nowiki>[</nowiki>--tree=''tree''<nowiki>]</nowiki> <nowiki>[</nowiki>--only-sources=''url''<nowiki>]</nowiki> <nowiki>[</nowiki>--deps-mode=''mode''<nowiki>]</nowiki> <nowiki>[</nowiki>''VAR''=''VALUE''<nowiki>]</nowiki>... ''command'' <nowiki>[</nowiki>''argument''<nowiki>]</nowiki>'''
 
-Variables from the "variables" table of the [[Config_file_format.wiki|configuration file]] can be overriden with VAR=VALUE assignments.
+Variables from the "variables" table of the [[Config file format|configuration file]] can be overriden with VAR=VALUE assignments.
 
 {| cellspacing=0px cellpadding=10px border=1px bordercolor=black align=center
 | --server=''server'' || Fetch rocks/rockspecs from this server (takes priority over config file)
@@ -16,7 +16,7 @@ Variables from the "variables" table of the [[Config_file_format.wiki|configurat
 | --tree=''tree'' || Which tree to operate on.
 |-
 | --deps-mode=''mode'' || Select dependencies mode:
-How to handle the list of rocks servers given in the rocks_servers array in the [[Config_file_format.wiki|config file]].
+How to handle the list of rocks servers given in the rocks_servers array in the [[Config file format|config file]].
 * '''one''' - Consider only the tree at the top of the list (possibly, the one given by the --tree flag, overriding all entries from rocks_trees), ignore all others
 * '''all''' - Consider all trees: if a dependency is installed in any tree of the rocks_trees list, we have a positive match.
 * '''order''' - Consider only trees starting from the "current" one in the order, where the "current" is either:
@@ -29,29 +29,29 @@ How to handle the list of rocks servers given in the rocks_servers array in the 
 == Supported commands ==
 
 {| cellspacing=0px cellpadding=10px border=1px bordercolor=black align=center
-| [[build.wiki|build]]   || Build/compile and install a rock.
+| [[build]]   || Build/compile and install a rock.
 |-
-| [[download.wiki|download]]|| Download a specific rock or rockspec file from a rocks server.
+| [[download]]|| Download a specific rock or rockspec file from a rocks server.
 |-
-| [[help.wiki|help]]    || Help on commands.
+| [[help]]    || Help on commands.
 |-
-| [[install.wiki|install]] || Install a rock.
+| [[install]] || Install a rock.
 |-
-| [[list.wiki|list]]    || Lists currently installed rocks.
+| [[list]]    || Lists currently installed rocks.
 |-
-| [[make.wiki|make]]    || Compile package in current directory using a rockspec and install it.
+| [[make]]    || Compile package in current directory using a rockspec and install it.
 |-
-| [[pack.wiki|pack]]    || Create a rock, packing sources or binaries.
+| [[pack]]    || Create a rock, packing sources or binaries.
 |-
-| [[path.wiki|path]]    || Return the currently configured package path.
+| [[path]]    || Return the currently configured package path.
 |-
-| [[remove.wiki|remove]]  || Uninstall a rock.
+| [[remove]]  || Uninstall a rock.
 |-
-| [[search.wiki|search]]  || Query the LuaRocks repositories.
+| [[search]]  || Query the LuaRocks repositories.
 |-
-| [[show.wiki|show]]    || Shows information about an installed rock.
+| [[show]]    || Shows information about an installed rock.
 |-
-| [[unpack.wiki|unpack]]  || Unpack the contents of a rock.
+| [[unpack]]  || Unpack the contents of a rock.
 |}
 
 

@@ -63,7 +63,7 @@ or entries in the configuration file.
 | --force-config || Use a single config location. Do not use the $LUAROCKS_CONFIG variable or the user's home directory. Useful to avoid conflicts when LuaRocks is embedded within an application.
 |}
 
-After installation, a default config file called config.lua will be installed at the directory defined by --sysconfdir. For further configuration of LuaRocks paths, see the [[Config_file_format.wiki|Config file format]].
+After installation, a default config file called config.lua will be installed at the directory defined by --sysconfdir. For further configuration of LuaRocks paths, see the [[Config file format]].
 
 == Making a self-contained installation ==
 
@@ -107,4 +107,4 @@ that variable in your configuration file directly.
 
 == Next steps ==
 
-Once LuaRocks is installed, learn more about [[Using_LuaRocks.wiki|using LuaRocks]].
+Once LuaRocks is installed, learn more about [[Using LuaRocks|using LuaRocks]].

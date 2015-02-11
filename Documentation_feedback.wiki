@@ -22,7 +22,7 @@ how to work with proxy server&
 
 From ionous (dev.ionous.net)
 
-I'm a new(ish) lua user. I'd successfully extended lua by embedding lua in my c code, but I wanted to reverse things, and make my code a rock. I followed [[Creating_a_rock.wiki|Creating a rock]], but it took me a bit to make it all work.
+I'm a new(ish) lua user. I'd successfully extended lua by embedding lua in my c code, but I wanted to reverse things, and make my code a rock. I followed [[Creating a rock]], but it took me a bit to make it all work.
 
 It wasn't initially clear to me I needed a luaopen_<module name> function, and that the dll(s) would be named after the module(s) not the package. ( My original registration function had been PascalCase because I didn't realize there was a standard convention. ) It all makes sense now that I've made the connection between the concept of a "lua module" and the "module" section of the rockspec, but that didn't happen automatically for me because I'm still so new to lua. "module" to me in the rocks docs seemed like just an arbitrary useful division of the rockspec into subparts.
 

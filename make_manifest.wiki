@@ -1,1 +1,1 @@
-See [[make-manifest.wiki|make-manifest]]. Both syntaxes are supported.
+See [[make-manifest]]. Both syntaxes are supported.

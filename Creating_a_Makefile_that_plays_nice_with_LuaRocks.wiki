@@ -1,4 +1,4 @@
-The page about [[Recommended_practices_for_Makefiles.wiki|Recommended practices for Makefiles]] mentions what you
+The page about [[Recommended practices for Makefiles]] mentions what you
 should do in order to create a Makefile that LuaRocks can work with. What
 it does not do is to explain how to interact between your rockspec and
 the Makefile so that your rock will install in a way such that LuaRocks
@@ -171,4 +171,4 @@ only to show how to take advantage of LuaRocks' builtin helpers for this
 sort of thing. Also, keep in mind that for additional external dependencies,
 more variables are created by LuaRocks, which have to be passed to the
 Makefile in the same way. Check the other documentation, especially
-[[Rockspec_format.wiki|Rockspec format]] and [[Recommended_practices_for_Makefiles.wiki|Recommended practices for Makefiles]], for details.
+[[Rockspec format]] and [[Recommended practices for Makefiles]], for details.

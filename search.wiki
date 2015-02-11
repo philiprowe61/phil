@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] search <nowiki>[--source] [--binary]</nowiki> { ''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki> | --all }'''
+:'''[[luarocks]] search <nowiki>[--source] [--binary]</nowiki> { ''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki> | --all }'''
 
 ;--source
 :Return only rockspecs and source rocks, to be used with the "build" command.
@@ -11,7 +11,7 @@
 ;--all
 :List all contents of the repositories that are suitable to this platform, do not filter by name.
 
-The [[search.wiki|search]] command queries remote repositories. To query your local repository (the rocks you have installed), use [[list.wiki|list]].
+The [[search]] command queries remote repositories. To query your local repository (the rocks you have installed), use [[list]].
 
 == Example ==
 

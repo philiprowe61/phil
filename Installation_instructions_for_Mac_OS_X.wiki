@@ -14,8 +14,8 @@ and then install LuaRocks with:
 
 == Option 2: installing it manually ==
 
-If you do not wish to use a package management tool to install LuaRocks, you can install it on OS X as you would do in any other Unix system. Download the Unix tarball and then follow the [[Installation_instructions_for_Unix.wiki|installation instructions for Unix]] to install it to /usr/local.
+If you do not wish to use a package management tool to install LuaRocks, you can install it on OS X as you would do in any other Unix system. Download the Unix tarball and then follow the [[Installation instructions for Unix|installation instructions for Unix]] to install it to /usr/local.
 
 == Next steps ==
 
-Once LuaRocks is installed, learn more about [[Using_LuaRocks.wiki|using LuaRocks]].
+Once LuaRocks is installed, learn more about [[Using LuaRocks|using LuaRocks]].

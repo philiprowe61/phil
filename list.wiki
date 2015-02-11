@@ -2,11 +2,11 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] list <nowiki>[</nowiki>''query''<nowiki>]</nowiki>'''
+:'''[[luarocks]] list <nowiki>[</nowiki>''query''<nowiki>]</nowiki>'''
 
 ''query'' is a substring of a rock name to filter by. When no arguments are supplied, a list of all rocks you have installed is returned.
 
-The [[list.wiki|list]] command queries the local repository (the rocks you have installed). To query remote repositories (the rocks available for download at the LuaRocks server), use [[search.wiki|search]].
+The [[list]] command queries the local repository (the rocks you have installed). To query remote repositories (the rocks available for download at the LuaRocks server), use [[search]].
 
 == Example ==
 

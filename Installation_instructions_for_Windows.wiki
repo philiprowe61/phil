@@ -66,7 +66,7 @@ Other options:
 | /Q             || Do not prompt for confirmation of settings
 |}
 
-After installation, a default config file called config.lua will be installed at the directory defined by /CONFIG. For further configuration of LuaRocks paths, see the [[Config_file_format.wiki|Config file format]]. For more information on the structure of rocks trees see [[Rocks_repositories.wiki|rocks repositories]].
+After installation, a default config file called config.lua will be installed at the directory defined by /CONFIG. For further configuration of LuaRocks paths, see the [[Config file format]]. For more information on the structure of rocks trees see [[Rocks repositories|rocks repositories]].
 
 == Making a self-contained installation ==
 
@@ -117,7 +117,7 @@ LuaRocks will analyse the executable found.
 
 == Next steps ==
 
-Once LuaRocks is installed, learn more about [[Using_LuaRocks.wiki|using LuaRocks]].
+Once LuaRocks is installed, learn more about [[Using LuaRocks|using LuaRocks]].
 
 ----
 

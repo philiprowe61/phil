@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] install {''rock'' | ''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki>}'''
+:'''[[luarocks]] install {''rock'' | ''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki>}'''
 
 Argument may be the name of a rock to be fetched from a server or the direct URL or filename of a rockspec. In case of more than one rock matching the request, the "install" command favors binary rocks.
 

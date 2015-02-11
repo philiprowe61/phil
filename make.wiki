@@ -2,9 +2,9 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] make  <nowiki>[</nowiki>--pack-binary-rock<nowiki>]</nowiki>  <nowiki>[</nowiki>''rockspec''<nowiki>]</nowiki>'''
+:'''[[luarocks]] make  <nowiki>[</nowiki>--pack-binary-rock<nowiki>]</nowiki>  <nowiki>[</nowiki>''rockspec''<nowiki>]</nowiki>'''
 
-Builds sources in the current directory, but unlike [[build.wiki|build]],
+Builds sources in the current directory, but unlike [[build]],
 it does not fetch sources, etc., assuming everything is
 available in the current directory. After the build is complete, it
 also installs the rock.

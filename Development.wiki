@@ -6,6 +6,6 @@ The implementation is documented using LuaDoc. You can [http://luarocks.luaforge
 
 == Development docs ==
 
-* [[To-do_list.wiki|To-do list]] – things yet to be done and/or defined.
-* [[Related_work.wiki|Related work]] – A survey on build and deployment systems for other languages.
+* [[To-do list]] – things yet to be done and/or defined.
+* [[Related work]] – A survey on build and deployment systems for other languages.
 

@@ -6,13 +6,13 @@ LuaRocks is a pure Lua application with no library dependencies. Its current rel
 
 Download LuaRocks [http://luarocks.org/releases here].
 
-Current release is '''2.2.0''': see the [[Release_history.wiki|release history]].
+Current release is '''2.2.0''': see the [[Release history|release history]].
 
 == Installing ==
 
-* [[Installation_instructions_for_Unix.wiki|Installation instructions for Unix]] (Linux, BSDs, etc.)
-* [[Installation_instructions_for_Mac_OS_X.wiki|Installation instructions for Mac OS X]]
-* [[Installation_instructions_for_Windows.wiki|Installation instructions for Windows]]
+* [[Installation instructions for Unix]] (Linux, BSDs, etc.)
+* [[Installation instructions for Mac OS X]]
+* [[Installation instructions for Windows]]
 
 == The bleeding edge ==
 

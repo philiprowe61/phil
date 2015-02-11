@@ -2,11 +2,11 @@ LuaRocks handles dependencies on Lua modules — rocks can specify other rocks i
 
 LuaRocks also supports verification of dependencies on external libraries. A rock can specify an external package it depends on (for example, a C library), and give to LuaRocks hints on how to detect if it is present, typically as C header or library filenames. LuaRocks then looks for these files in a pre-configured search path and, if found, assumes the dependency is fulfilled. If not found, an error message is reported and the user can then install the missing external dependency (using the tools provided by their operating system) or inform LuaRocks of the location of the external dependency in case it was installed and LuaRocks failed to find it.
 
-Dependencies of a rock are specified in its [[Rockspec_format.wiki|rockspec]] file. See the complete specification of the dependency syntax in the [[Rockspec_format.wiki|Rockspec format]] page and examples in rockspec files of the [http://luarocks.luaforge.net/rocks/ public rocks server].
+Dependencies of a rock are specified in its [[Rockspec format|rockspec]] file. See the complete specification of the dependency syntax in the [[Rockspec format]] page and examples in rockspec files of the [http://luarocks.luaforge.net/rocks/ public rocks server].
 
 == Dependency modes ==
 
-Since 2.0.12, the LuaRocks command-line tool supports different "dependency modes". These are useful to specify how it should behave on the presence of multiple rocks trees specified in the [[Config_file_format.wiki|config file]]:
+Since 2.0.12, the LuaRocks command-line tool supports different "dependency modes". These are useful to specify how it should behave on the presence of multiple rocks trees specified in the [[Config file format|config file]]:
 
 * one
 * all

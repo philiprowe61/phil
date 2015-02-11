@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] path <nowiki>[</nowiki>--bin<nowiki>]</nowiki>'''
+:'''[[luarocks]] path <nowiki>[</nowiki>--bin<nowiki>]</nowiki>'''
 
 Returns the package path currently configured for this installation
 of LuaRocks, formatted as shell commands to update LUA_PATH and

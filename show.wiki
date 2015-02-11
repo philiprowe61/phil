@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] show ''package'' '''
+:'''[[luarocks]] show ''package'' '''
 
 <argument> is an installed package name.
 Without any flags, show all module information.

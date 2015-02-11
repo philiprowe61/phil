@@ -6,7 +6,7 @@ So, you wrote a Lua package (containing one or more modules) and want to make it
 
 == Writing a rockspec ==
 
-A rockspec file is the metadata file for your package, containing all the information LuaRocks needs in order to fetch, build and install your package. The [[Rockspec_format.wiki|Rockspec format]] supports various kind of build systems, but in this tutorial we'll use LuaRocks's own built-in build system -- that's why we're listing "Writing a rockspec" as the first step. We'll use the rockspec in place of a Makefile.
+A rockspec file is the metadata file for your package, containing all the information LuaRocks needs in order to fetch, build and install your package. The [[Rockspec format]] supports various kind of build systems, but in this tutorial we'll use LuaRocks's own built-in build system -- that's why we're listing "Writing a rockspec" as the first step. We'll use the rockspec in place of a Makefile.
 
 A rockspec is actually a Lua file, but it is loaded in an empty environment, so there are no Lua functions available. A skeleton for a basic rockspec looks like this:
 
@@ -102,7 +102,7 @@ Many modules can be written to run in both Lua 5.1 and 5.2, so the dependency ca
 
 :''If your code does not use third-party libraries, you may skip this subsection.''
 
-For building C code that links to C libraries, you can use the long syntax given in the "date" example above, in which sources are listed in the "sources" subtable. You need to specify the libraries to be linked in the "libraries" subtable. The library name is specified in a platform-independent way: in the above example, libraries={"date"} will result in -ldate for GCC on Unix and DATE.LIB for MSVC on Windows. (Note that if this is not appropriate, the rockspec format allows [[Rockspec_format.wiki|per-platform overrides]].) If you need to link code that uses libraries, you need to tell LuaRocks where to find them. You do this by adding a new section to the rockspec:
+For building C code that links to C libraries, you can use the long syntax given in the "date" example above, in which sources are listed in the "sources" subtable. You need to specify the libraries to be linked in the "libraries" subtable. The library name is specified in a platform-independent way: in the above example, libraries={"date"} will result in -ldate for GCC on Unix and DATE.LIB for MSVC on Windows. (Note that if this is not appropriate, the rockspec format allows [[Rockspec format|per-platform overrides]].) If you need to link code that uses libraries, you need to tell LuaRocks where to find them. You do this by adding a new section to the rockspec:
 
  ....
  external_dependencies = {
@@ -113,7 +113,7 @@ For building C code that links to C libraries, you can use the long syntax given
  build = {
  ....
 
-Adding the "external_dependencies" table will make LuaRocks search for the external dependencies in its lookup path (on Unix the defaults are /usr/local and /usr; on Windows, which doesn't have a standard for development trees, you'll probably have to specify  yourself through the [[Config_file_format.wiki|config file]] or the [[luarocks.wiki|command-line]] when invoking "luarocks"). We give a hint to LuaRocks, the libdate.h header, so it can test whether the development package is really there (on many Linux distros, one needs to install "-dev" packages in order to have all headers and libraries needed for compilation available, so header files are a good hint). In this case, for example, it would look for /usr/local/include/libdate.h and /usr/include/libdate.h on Unix. If you (or your users) have LibDate installed elsewhere, it's always possible to tell LuaRocks so through the command-line, passing for example LIBDATE_DIR=/opt/libdate as an argument.
+Adding the "external_dependencies" table will make LuaRocks search for the external dependencies in its lookup path (on Unix the defaults are /usr/local and /usr; on Windows, which doesn't have a standard for development trees, you'll probably have to specify  yourself through the [[Config file format|config file]] or the [[luarocks|command-line]] when invoking "luarocks"). We give a hint to LuaRocks, the libdate.h header, so it can test whether the development package is really there (on many Linux distros, one needs to install "-dev" packages in order to have all headers and libraries needed for compilation available, so header files are a good hint). In this case, for example, it would look for /usr/local/include/libdate.h and /usr/include/libdate.h on Unix. If you (or your users) have LibDate installed elsewhere, it's always possible to tell LuaRocks so through the command-line, passing for example LIBDATE_DIR=/opt/libdate as an argument.
 
 When LuaRocks succeeds finding an external dependency, it creates special variables for it which can be used in incdirs and libdirs fields. The example above shows two such variables, LIBDATE_INCDIR and LIBDATE_LIBDIR being use. It's important to always pass those variables: if LibDate happened to be in the system lookup path of your compiler, compilation would succeed without those variables, but they would fail in a user's system where they are somewhere else, such as in the LIBDATE_DIR=/opt/libdate example given earlier.
 
@@ -162,7 +162,7 @@ Don't worry about deployment complications when using this method. When you sumb
 
 === Method 2: publishing a tarball ===
 
-When using a zip or tarball, by default LuaRocks expects it to contain a top-level directory with your code. This directory should be named the same as the tarball itself (but without the .zip or .tar.gz extension) and its recommended that this name be the lowercase name of the package with its version number (but without the LuaRocks revision number). If your code is located in a different directory, please see [[Rockspec_format.wiki|Rockspec_format]] for instructions. In our example, we should make a tarball with the following contents:
+When using a zip or tarball, by default LuaRocks expects it to contain a top-level directory with your code. This directory should be named the same as the tarball itself (but without the .zip or .tar.gz extension) and its recommended that this name be the lowercase name of the package with its version number (but without the LuaRocks revision number). If your code is located in a different directory, please see [[Rockspec format|Rockspec_format]] for instructions. In our example, we should make a tarball with the following contents:
 
  luafruits-1.0/
  luafruits-1.0/src/apricot.lua
@@ -253,4 +253,4 @@ If you have the rock installed in your local tree, you can also pack the binarie
 
 And we're done -- by writing a simple rules file which simply describes which sources compose the project and which libraries they use, we actually achieved a lot behind the scenes: LuaRocks takes care of using the right compiler for your platform (GCC? MSVC?), passing the right flags (-fpic? -shared? -bundle -undefined dynamic_lookup?) and checking external dependencies (/usr/lib? /usr/local/lib? Is it really there?). Getting all these little portability details right is not always easy to do on hand-written Makefiles, so that's why we recommend using LuaRocks's own build system whenever possible. There are many other features of LuaRocks we haven't covered in this tutorial (per-platform overrides, support for command-line scripts, etc.), but this should get you started -- browse around the wiki for more.
 
-And of course, we're eager to receive all kinds of feedback in the LuaRocks [[Mailing_list.wiki|mailing list]].
+And of course, we're eager to receive all kinds of feedback in the LuaRocks [[Mailing list|mailing list]].

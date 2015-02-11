@@ -2,11 +2,11 @@
 
 If you're just getting started with LuaRocks, these are things you probably want to read first:
 
-* [[Download.wiki|Download]]
+* [[Download]]
 * To install, choose the one appropriate for your platform:
-** [[Installation_instructions_for_Unix.wiki|Installation instructions for Unix]]
-** [[Installation_instructions_for_Windows.wiki|Installation instructions for Windows]]
-* [[Using_LuaRocks.wiki|Using LuaRocks]]
+** [[Installation instructions for Unix]]
+** [[Installation instructions for Windows]]
+* [[Using LuaRocks]]
 
 
 
@@ -14,37 +14,37 @@ The sections below provide more comprehensive information for creating your own 
 
 == Tutorials ==
 
-* [[Creating_a_rock.wiki|Creating a rock]] - for Lua developers who want to make their code available through LuaRocks.
-* [[Recommended_practices_for_Makefiles.wiki|Recommended practices for Makefiles]] - things Lua module authors can do to their Makefiles to improve portability and ease of packaging.
-* [[Creating_a_Makefile_that_plays_nice_with_LuaRocks.wiki|Creating a Makefile that plays nice with LuaRocks]] - like the above, but in tutorial form.
-* [[Creating_LuaRocks_with_GNU_autotools.wiki|Creating LuaRocks with GNU autotools]] - some pointers to automating the creation of LuaRocks for your GNU autotools-based projects
+* [[Creating a rock]] - for Lua developers who want to make their code available through LuaRocks.
+* [[Recommended practices for Makefiles]] - things Lua module authors can do to their Makefiles to improve portability and ease of packaging.
+* [[Creating a Makefile that plays nice with LuaRocks]] - like the above, but in tutorial form.
+* [[Creating LuaRocks with GNU autotools]] - some pointers to automating the creation of LuaRocks for your GNU autotools-based projects
 
 == Concepts ==
 
 These pages explain some concepts about LuaRocks:
 
-* [[Types_of_rocks.wiki|Types of rocks]] - What are rocks: source rocks, binary rocks...
-* [[Rocks_repositories.wiki|Rocks repositories]] - rocks servers and rocks trees are rocks repositories.
-* [[Dependencies.wiki|Dependencies]] - How LuaRocks understands dependencies.
-** [[Platform-agnostic_external_dependencies.wiki|Platform-agnostic external dependencies]] - How to specify dependencies on non-Lua libraries in a portable manner.
-** [[Paths_and_external_dependencies.wiki|Paths and external dependencies]] - Configuring path for Lua and other C modules needed by rocks.
-* [[Using_LuaRocks.wiki|Using LuaRocks]] - How to use LuaRocks once it is installed and configured.
+* [[Types of rocks]] - What are rocks: source rocks, binary rocks...
+* [[Rocks repositories]] - rocks servers and rocks trees are rocks repositories.
+* [[Dependencies]] - How LuaRocks understands dependencies.
+** [[Platform-agnostic external dependencies]] - How to specify dependencies on non-Lua libraries in a portable manner.
+** [[Paths and external dependencies]] - Configuring path for Lua and other C modules needed by rocks.
+* [[Using LuaRocks]] - How to use LuaRocks once it is installed and configured.
 
 == Command-line tools ==
 
-* [[luarocks.wiki|luarocks]] - The LuaRocks command-line interface.
-* [[luarocks-admin.wiki|luarocks-admin]] - The repository management tool.
+* [[luarocks]] - The LuaRocks command-line interface.
+* [[luarocks-admin]] - The repository management tool.
 
 == Reference material ==
 
-* [[File_formats.wiki|File formats]] - Reference on the various files used by LuaRocks.
-* [[File_locations.wiki|File locations]] - The various locations of files installed and used by LuaRocks.
-** [[Rockspec_format.wiki|Rockspec format]] - Rockspecs are the files which contain rules explaining how rocks are built and installed as well as their dependencies and other metadata.
-*** [[Platform_overrides.wiki|Platform overrides]] - How to add platform-specific parts in rockspecs.
-** [[Config_file_format.wiki|Config file format]] - The specification of the LuaRocks configuration file format, as it takes shape.
-** [[Manifest_file_format.wiki|Manifest file format]] - The index file that describes a LuaRocks [[Rocks_repositories.wiki|servers and trees]].
-* [[LuaRocks_through_a_proxy.wiki|LuaRocks through a proxy]] - Configuring HTTP/FTP proxies for use with LuaRocks.
-* [[Development.wiki|Development]] - Documentation related to the development of LuaRocks itself.
+* [[File formats]] - Reference on the various files used by LuaRocks.
+* [[File locations]] - The various locations of files installed and used by LuaRocks.
+** [[Rockspec format]] - Rockspecs are the files which contain rules explaining how rocks are built and installed as well as their dependencies and other metadata.
+*** [[Platform overrides]] - How to add platform-specific parts in rockspecs.
+** [[Config file format]] - The specification of the LuaRocks configuration file format, as it takes shape.
+** [[Manifest file format]] - The index file that describes a LuaRocks [[Rocks repositories|servers and trees]].
+* [[LuaRocks through a proxy]] - Configuring HTTP/FTP proxies for use with LuaRocks.
+* [[Development]] - Documentation related to the development of LuaRocks itself.
 
 == Presentations ==
 
@@ -54,4 +54,4 @@ These pages explain some concepts about LuaRocks:
 
 Missing something in the documentation?
 
-Leave your requests for further docs in the [[Documentation_feedback.wiki|Documentation feedback]] page.
+Leave your requests for further docs in the [[Documentation feedback]] page.

@@ -1,4 +1,4 @@
-Since 0.6, LuaRocks supports specifying files for external dependency search in a platform-agnostic way. When filenames given in the '''external_dependencies''' section of a [[Rockspec_format.wiki|rockspec]] don't have any dot (".") characters, their contents are substituted according to the patterns given in the '''external_deps_patterns''' table of the [[Config_file_format.wiki|configuration file]].
+Since 0.6, LuaRocks supports specifying files for external dependency search in a platform-agnostic way. When filenames given in the '''external_dependencies''' section of a [[Rockspec format|rockspec]] don't have any dot (".") characters, their contents are substituted according to the patterns given in the '''external_deps_patterns''' table of the [[Config file format|configuration file]].
 
 These patterns will typically not be used in the configuration file, as LuaRocks provides sensible defaults. The default patterns defined on Unix are:
 
@@ -12,7 +12,7 @@ On Windows the defaults are:
  lib = {"?.lib", "?.dll"}
  include = {"?.h"}
 
-For example, a [[Rockspec_format.wiki|rockspec]] can define an external dependency like this:
+For example, a [[Rockspec format|rockspec]] can define an external dependency like this:
 
  external_dependencies = {
     FOO = {
@@ -26,7 +26,7 @@ When performing external dependency checks during installation (as opposed to bu
 
 == When filenames don't match ==
 
-If the pattern system is not enough to hide platform differences, you can always resort to [[Platform_overrides.wiki|per-platform overrides]]. For example:
+If the pattern system is not enough to hide platform differences, you can always resort to [[Platform overrides|per-platform overrides]]. For example:
 
  external_dependencies = {
     FOO = {
@@ -43,4 +43,4 @@ If the pattern system is not enough to hide platform differences, you can always
 
 == Statically linked libraries and dependencies ==
 
-If your rock links a library statically, avoid adding a library search in its [[Rockspec_format.wiki|rockspec]]'s '''external_dependencies''' table. Search for a header instead, so that the external dependency search does not fail when users install a binary rock and they don't have the library installed separately.
+If your rock links a library statically, avoid adding a library search in its [[Rockspec format|rockspec]]'s '''external_dependencies''' table. Search for a header instead, so that the external dependency search does not fail when users install a binary rock and they don't have the library installed separately.

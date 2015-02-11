@@ -1,8 +1,8 @@
 For normal use, rocks repositories are manipulated by the <tt>luarocks</tt> command-line tool. LuaRocks fetches rocks from one kind of repository -- rocks servers -- and installs them into another kind of repository -- rocks trees.
 
-Generally speaking, a rocks repository is a directory containing rocks and/or rockspecs, and a manifest file which catalogs the rocks contained therein.  Rocks servers may contain [[Types_of_rocks.wiki|packed rocks]] and rockspecs, and may be located in remote (HTTP or FTP) URLs or paths in the local filesystem. Rocks trees can contain only [[Types_of_rocks.wiki|unpacked]] (installed) rocks, and are always local.
+Generally speaking, a rocks repository is a directory containing rocks and/or rockspecs, and a manifest file which catalogs the rocks contained therein.  Rocks servers may contain [[Types of rocks|packed rocks]] and rockspecs, and may be located in remote (HTTP or FTP) URLs or paths in the local filesystem. Rocks trees can contain only [[Types of rocks|unpacked]] (installed) rocks, and are always local.
 
-LuaRocks can be configured to use multiple rocks trees and multiple rocks servers. See the [[Config_file_format.wiki|Config file format]] for details and the reference for the [[luarocks.wiki|luarocks]] command-line tool for details.
+LuaRocks can be configured to use multiple rocks trees and multiple rocks servers. See the [[Config file format]] for details and the reference for the [[luarocks]] command-line tool for details.
 
 Publishing a repository as a rocks server consists of making a directory containing rocks and a manifest file available online. A manifest file can be created using the make-manifest command of the <tt>luarocks-admin</tt> command-line tool, included in LuaRocks. For the rocks tree, the manifest file is updated automatically by LuaRocks.
 

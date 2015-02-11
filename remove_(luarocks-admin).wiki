@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks-admin.wiki|luarocks-admin]] remove <nowiki>[</nowiki>--from=''server''<nowiki>]</nowiki> <nowiki>[</nowiki>--no-refresh<nowiki>]</nowiki> {''rockspec''|''rock''}'''
+:'''[[luarocks-admin]] remove <nowiki>[</nowiki>--from=''server''<nowiki>]</nowiki> <nowiki>[</nowiki>--no-refresh<nowiki>]</nowiki> {''rockspec''|''rock''}'''
 
 Arguments are local files, which may be rockspecs or rocks.
 
@@ -10,7 +10,7 @@ The flag --from indicates which server to use. If not given, the default server 
 
 The flag --no-refresh indicates the local cache should not be refreshed prior to generation of the updated manifest.
 
-You need to have [[http://rsync.samba.org.wiki|rsync]] installed in order to use this command.
+You need to have [[http://rsync.samba.org|rsync]] installed in order to use this command.
 
 == Example ==
 

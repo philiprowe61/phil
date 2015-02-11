@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] help <nowiki>[</nowiki>''command''<nowiki>]</nowiki>'''
+:'''[[luarocks]] help <nowiki>[</nowiki>''command''<nowiki>]</nowiki>'''
 
 ''command'' is the command to show help for. If no argument is given, a list of supported commands, with summaries, is returned. 
 

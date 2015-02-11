@@ -17,10 +17,10 @@ For Windows users the libraries and headers maybe awkward, as Windows tends to h
 
 most installations will feature two rocks trees;
 
-* System [[Rocks_repositories.wiki|rock tree]] (used by default)
-* User [[Rocks_repositories.wiki|rock tree]]
+* System [[Rocks repositories|rock tree]] (used by default)
+* User [[Rocks repositories|rock tree]]
 
-The [[Rocks_repositories.wiki|deployment directories]] contained within the rock trees should probably be added to the <tt>LUA_PATH</tt> and <tt>LUA_CPATH</tt> environment variables, so the Lua interpreter can find the modules installed.
+The [[Rocks repositories|deployment directories]] contained within the rock trees should probably be added to the <tt>LUA_PATH</tt> and <tt>LUA_CPATH</tt> environment variables, so the Lua interpreter can find the modules installed.
 
 == path to install commandline scripts ==
 

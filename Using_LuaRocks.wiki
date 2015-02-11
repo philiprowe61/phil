@@ -1,16 +1,16 @@
-So, you followed the installation instructions (either on [[Installation_instructions_for_Unix.wiki|Unix]] or [[Installation_instructions_for_Windows.wiki|Windows]]) and now you have LuaRocks installed in your machine. Now you probably want to install some rocks (packages containing Lua modules) and use them in your Lua code. 
+So, you followed the installation instructions (either on [[Installation instructions for Unix|Unix]] or [[Installation instructions for Windows|Windows]]) and now you have LuaRocks installed in your machine. Now you probably want to install some rocks (packages containing Lua modules) and use them in your Lua code. 
 
 For LuaRocks to function properly, we have a quick checklist to go through first:
 
 ==== Command-line tools (and the system path) ====
 
-LuaRocks installs some command-line tools which are your interface for managing your rocks: [[luarocks.wiki|luarocks]] and [[luarocks-admin.wiki|luarocks-admin]]. Make sure the directory where they are located is in your PATH -- the exact location depends on the flags you gave when installing LuaRocks.
+LuaRocks installs some command-line tools which are your interface for managing your rocks: [[luarocks]] and [[luarocks-admin]]. Make sure the directory where they are located is in your PATH -- the exact location depends on the flags you gave when installing LuaRocks.
 
-Run [[luarocks.wiki|luarocks]] to see the available commands:
+Run [[luarocks]] to see the available commands:
 
  luarocks 
 
-You can get help on any command by using the [[help.wiki|help]] command:
+You can get help on any command by using the [[help]] command:
 
  luarocks help install
 

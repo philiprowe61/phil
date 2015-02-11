@@ -2,7 +2,7 @@
 
 == Usage ==
 
-:'''[[luarocks.wiki|luarocks]] remove <nowiki>[--force]</nowiki> ''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki>'''
+:'''[[luarocks]] remove <nowiki>[--force]</nowiki> ''name'' <nowiki>[</nowiki>''version''<nowiki>]</nowiki>'''
 
 ''name'' is the name of a rock to be uninstalled.
 If a ''version'' is not given, try to remove all versions at once.

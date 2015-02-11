@@ -6,8 +6,8 @@
 
 == Supported commands ==
 
-* [[help.wiki|help]] - Help on commands.
-* [[make-manifest.wiki|make-manifest]] - Compile a manifest file for a repository.
-* [[add.wiki|add]] - Add a rock or rockspec to a rocks server.
-* [[remove_(luarocks-admin).wiki|remove]] - Remove a rock or rockspec from a rocks server.
-* [[refresh-cache.wiki|refresh-cache]] - Refresh local cache of a remote rocks server.
+* [[help]] - Help on commands.
+* [[make-manifest]] - Compile a manifest file for a repository.
+* [[add]] - Add a rock or rockspec to a rocks server.
+* [[remove (luarocks-admin)|remove]] - Remove a rock or rockspec from a rocks server.
+* [[refresh-cache]] - Refresh local cache of a remote rocks server.

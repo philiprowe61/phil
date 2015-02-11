@@ -20,4 +20,4 @@ The design is the result of the work, contributions and suggestions of many peop
 * André Carregal
 * Fabio Mascarenhas
 * Roberto Ierusalimschy
-* the fine folks from the [[Mailing_list.wiki|luarocks-devel]] mailing list
+* the fine folks from the [[Mailing list|luarocks-devel]] mailing list

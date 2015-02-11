@@ -28,31 +28,31 @@ For Windows users, having libraries and headers around may be uncommon, as Windo
 
 LuaRocks by default is configured to use two rocks trees:
 
-* System-wide [[Rocks_repositories.wiki|rock tree]] (used by default)
+* System-wide [[Rocks repositories|rock tree]] (used by default)
 ** Unix default: /usr/local/
-* Per-user [[Rocks_repositories.wiki|rock tree]] (may be selected by the user with the --local flag).
+* Per-user [[Rocks repositories|rock tree]] (may be selected by the user with the --local flag).
 ** Unix default: $HOME/.luarocks/
 
-In order to use the modules installed in the rock trees, the [[Rocks_repositories.wiki|deployment directories]] should be in the <tt>LUA_PATH</tt> and <tt>LUA_CPATH</tt> environment variables. 
+In order to use the modules installed in the rock trees, the [[Rocks repositories|deployment directories]] should be in the <tt>LUA_PATH</tt> and <tt>LUA_CPATH</tt> environment variables. 
 
 On Unix, performing a vanilla installation of Lua from lua.org and a vanilla installation of LuaRocks will install both under /usr/local, meaning that the environment variables for the system-wide rock tree are correct by default.
 
-The command <tt>luarocks [[path.wiki|path]]</tt> outputs the correct environment variables set for a rock tree.
+The command <tt>luarocks [[path]]</tt> outputs the correct environment variables set for a rock tree.
 
 == Path where command-line scripts are installed ==
 
 Rocks may also deploy command-line scripts. This location is relative to the rock tree where they are installed:
 
-* System-wide [[Rocks_repositories.wiki|rock tree]] (used by default)
+* System-wide [[Rocks repositories|rock tree]] (used by default)
 ** Unix default: /usr/local/bin/
-* Per-user [[Rocks_repositories.wiki|rock tree]] (may be selected by the user with the --local flag).
+* Per-user [[Rocks repositories|rock tree]] (may be selected by the user with the --local flag).
 ** Unix default: $HOME/.luarocks/bin/
 
 To be able to call those scripts from the shell, the location where they are installed need to be in your environment path. 
 
 On Unix, /usr/local/bin is usually in the $PATH by default, but $HOME/.luarocks/bin is not. 
 
-The command <tt>luarocks [[path.wiki|path]] --bin</tt> outputs the correct PATH environment variables set for a rock tree.
+The command <tt>luarocks [[path]] --bin</tt> outputs the correct PATH environment variables set for a rock tree.
 
 == Compiler ==
 
