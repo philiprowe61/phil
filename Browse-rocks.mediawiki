@@ -4,6 +4,7 @@ Starting version 2.2.0, [http://rocks.moonscript.org MoonRocks] is the default r
 
 We also have the following mirrors:
 
-** [http://luarocks.giga.puc-rio.br/ luarocks.giga.puc-rio.br]
-** [http://luafr.org/moonrocks luafr.org/moonrocks]
-** [http://luarocks.logiceditor.com/rocks luarocks.logiceditor.com/rocks]
+* [http://luarocks.giga.puc-rio.br/ luarocks.giga.puc-rio.br]
+* [http://luafr.org/moonrocks luafr.org/moonrocks]
+* [http://luarocks.logiceditor.com/rocks luarocks.logiceditor.com/rocks]
+* [https://github.com/rocks-moonscript-org/moonrocks-mirror/ https://github.com/rocks-moonscript-org/moonrocks-mirror/]
