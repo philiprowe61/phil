@@ -24,7 +24,7 @@ To use modules installed with LuaRocks, all you need to do is make sure they are
 
 If you installed the Lua interpreter bundled with LuaRocks on Windows, or if you built both Lua and LuaRocks on Unix with the default paths, the default library path settings will be already appropriate.
 
-==== Multiple versions using the LuaRocks package loader ===
+==== Multiple versions using the LuaRocks package loader ====
 
 If you want to make use of LuaRocks' support for multiple installed versions of modules, you need to load a custom package loader: luarocks.loader.
 
