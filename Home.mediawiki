@@ -1,5 +1,8 @@
 This is '''LuaRocks''', a deployment and management system for Lua modules.
 
-LuaRocks allows you to install Lua modules as self-contained packages called "[[Types of rocks|rocks]]", which also contain version [[Dependencies|dependency]] information. This information is used both during installation, so that when one rock is requested all rocks it depends on are installed as well, and at run time, so that when a module is required, the correct version is loaded. LuaRocks supports both local and remote [[Rocks repositories|repositories]], and multiple local rocks trees. You can [[Download|download]] and install LuaRocks on [[Installation instructions for Unix|Unix]] and [[Installation instructions for Windows|Windows]].
+LuaRocks allows you to install Lua modules as self-contained packages called "[[Types of rocks|rocks]]", which also contain dependency information. LuaRocks supports both local and remote repositories, and multiple local rocks trees.
+
+* '''[[Download|download]]''' and install LuaRocks on [[Installation instructions for Unix|Unix]] and [[Installation instructions for Windows|Windows]].
+* '''[[Documentation]]''' available from this wiki.
 
 LuaRocks is free software and uses the same [[License|license]] as Lua.
