@@ -48,4 +48,8 @@ These pages explain some concepts about LuaRocks:
 
 == Presentations ==
 
-* [http://luarocks.luaforge.net/luarocks_fisl.odp LuaRocks: o sistema de pacotes de extensão para a linguagem Lua], presented by Hisham Muhammad at [http://fisl.softwarelivre.org/9.0/ FISL 9.0] - IX International Forum on Free Software, Porto Alegre, Brazil ([http://luarocks.luaforge.net/luarocks_fisl.odp ODP], in Portuguese)
+* [http://hisham.hm/talks#fosdem2015 LuaRocks: fostering an ecosystem for Lua modules], presented by Hisham Muhammad at FOSDEM 2015, Brussels, Belgium
+* [http://hisham.hm/talks#luawshop14 What's new in LuaRocks], presented by Hisham Muhammad at the Lua Workshop 2014, Moscow, Russia
+* [http://hisham.hm/talks#luawshop13 LuaRocks - past, present and future], presented by Hisham Muhammad at the Lua Workshop 2013, Toulouse, France
+* [http://hisham.hm/talks#luawshop09 LuaRocks 2.0], presented by Hisham Muhammad at the Lua Workshop 2009, Rio de Janeiro, Brazil
+* [http://hisham.hm/talks#fisl9 LuaRocks: o sistema de pacotes de extensão para a linguagem Lua], presented by Hisham Muhammad at FISL 9.0 - IX International Forum on Free Software, Porto Alegre, Brazil
