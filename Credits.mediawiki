@@ -6,6 +6,7 @@ While developed by an open source community, LuaRocks has been supported in vari
 * [http://www.fabricadigital.com.br/ Fábrica Digital]
 * [http://www.finep.gov.br/ FINEP]
 * [http://www.impa.br/ IMPA]
+* [http://www.lua.inf.puc-rio.br/ LabLua]
 
 ==Developers==
 
