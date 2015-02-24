@@ -6,7 +6,6 @@ While developed by an open source community, LuaRocks has been supported in vari
 * [http://www.fabricadigital.com.br/ Fábrica Digital]
 * [http://www.finep.gov.br/ FINEP]
 * [http://www.impa.br/ IMPA]
-* [http://www.webhostingsearch.com/ Website hosting] review guide, the WHS
 
 ==Developers==
 
