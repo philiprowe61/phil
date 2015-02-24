@@ -1,0 +1,13 @@
+==Institutional Sponsors==
+
+While developed by an open source community, LuaRocks has been supported in various forms by a number of organizations and we thank every one of them:
+
+* [http://www.cnpq.br CNPq]
+* [http://www.fabricadigital.com.br/ Fábrica Digital]
+* [http://www.finep.gov.br/ FINEP]
+* [http://www.impa.br/ IMPA]
+* [http://www.webhostingsearch.com/ Website hosting] review guide, the WHS
+
+==Developers==
+
+LuaRocks is a collective project, a product of [https://github.com/keplerproject/luarocks/graphs/contributors many hands]. The implementation is led by [http://hisham.hm Hisham Muhammad], but see the [https://github.com/keplerproject/luarocks/commits/master Git history] for detailed credits.
