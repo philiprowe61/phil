@@ -49,9 +49,3 @@ These pages explain some concepts about LuaRocks:
 == Presentations ==
 
 * [http://luarocks.luaforge.net/luarocks_fisl.odp LuaRocks: o sistema de pacotes de extensão para a linguagem Lua], presented by Hisham Muhammad at [http://fisl.softwarelivre.org/9.0/ FISL 9.0] - IX International Forum on Free Software, Porto Alegre, Brazil ([http://luarocks.luaforge.net/luarocks_fisl.odp ODP], in Portuguese)
-
-== Feedback ==
-
-Missing something in the documentation?
-
-Leave your requests for further docs in the [[Documentation feedback]] page.
