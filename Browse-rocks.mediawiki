@@ -1,6 +1,8 @@
-Starting version 2.2.0, [http://rocks.moonscript.org MoonRocks] is the default rocks server enabled in LuaRocks installations. Follow the link below to see what packages are available. You can also use the [[search]] command in the [[luarocks]] command-line tool.
+To browse rocks, simply go to:
 
-* [http://rocks.moonscript.org MoonRocks] - browse rocks here!
+* [http://luarocks.org]
+
+You can also use the [[search]] command in the [[luarocks]] command-line tool.
 
 We also have the following mirrors:
 
