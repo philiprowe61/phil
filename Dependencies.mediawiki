@@ -17,7 +17,7 @@ This can be set through the configuration file, using the string variable deps_m
 
 === one ===
 
-This is the default, conservative behavior. LuaRocks only takes '''one''' rocks tree into account when checking dependencies. For example, if you have two rocks trees configured (rocks_trees={home.."/.luarocks", "/usr"}) and you try to install a rock in $HOME/.luarocks, it will check that all required dependencies are installed _in that tree_. If the dependency rock is already installed under /usr, it will ignore that copy.
+This is the default, conservative behavior. LuaRocks only takes '''one''' rocks tree into account when checking dependencies. For example, if you have two rocks trees configured (rocks_trees={home.."/.luarocks", "/usr"}) and you try to install a rock in $HOME/.luarocks, it will check that all required dependencies are installed ''in that tree''. If the dependency rock is already installed under /usr, it will ignore that copy.
 
 This is conservative because it ensures that a rock and all its dependencies are installed under the same tree. So, if another user modifies the other tree, there's no risk that the rock installed in your home tree might stop working.
 
