@@ -48,6 +48,16 @@ These pages explain some concepts about LuaRocks:
 * [[LuaRocks through a proxy]] - Configuring HTTP/FTP proxies for use with LuaRocks.
 * [[Development]] - Documentation related to the development of LuaRocks itself.
 
+== More resources ==
+
+* On LuaRocks:
+** [[Mailing list|LuaRocks mailing list]] - the LuaRocks mailing list, for all things LuaRocks
+* On Lua:
+** [http://www.lua.org/lua-l.html Lua mailing list] - for questions about the Lua language itself or specific Lua modules (most module authors hang out there!)
+** [http://www.lua.org/docs.html Lua documentation] - documentation on the Lua language, including the reference manual
+* On LuaJIT:
+** [http://luajit.org/list.html LuaJIT mailing list] - for LuaJIT-specific discussion
+
 == Presentations ==
 
 * [http://hisham.hm/talks#fosdem2015 LuaRocks: fostering an ecosystem for Lua modules], presented by Hisham Muhammad at FOSDEM 2015, Brussels, Belgium
