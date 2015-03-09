@@ -48,7 +48,7 @@ These pages explain some concepts about LuaRocks:
 * [[LuaRocks through a proxy]] - Configuring HTTP/FTP proxies for use with LuaRocks.
 * [[Development]] - Documentation related to the development of LuaRocks itself.
 
-== More resources ==
+== Support / more resources ==
 
 * On LuaRocks:
 ** [[Mailing list|LuaRocks mailing list]] - the LuaRocks mailing list, for all things LuaRocks
