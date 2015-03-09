@@ -51,7 +51,7 @@ These pages explain some concepts about LuaRocks:
 == Support / more resources ==
 
 * On LuaRocks:
-** [[Mailing list|LuaRocks mailing list]] - the LuaRocks mailing list, for all things LuaRocks
+** [[Mailing list|LuaRocks mailing list]] - for all things LuaRocks!
 * On Lua:
 ** [http://www.lua.org/lua-l.html Lua mailing list] - for questions about the Lua language itself or specific Lua modules (most module authors hang out there!)
 ** [http://www.lua.org/docs.html Lua documentation] - documentation on the Lua language, including the reference manual
