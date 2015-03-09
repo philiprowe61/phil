@@ -1,3 +1,5 @@
+This page is the index of documentation resources for LuaRocks. If you don't find the answers to your questions here, contact us via the [[mailing list]]!
+
 == Quick start ==
 
 If you're just getting started with LuaRocks, these are things you probably want to read first:
