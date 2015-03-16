@@ -81,7 +81,9 @@ In the "builtin" type, we add a subtable called "modules", in which keys are mod
 
 Since modules written in Lua do not need to be compiled, LuaRocks only needs to know where they are in your source directory tree  in order to copy them to the proper place on installation (see the "apricot" and "apricot.seeds" in the above example).
 
-Similarly, for C code with no dependencies on external libraries, it suffices to say where the sources are and LuaRocks will invoke the appropriate compiler and linker for the platform. You can use a simple string value for single-file modules, such as the "banana" example above or an array value for multiple source files (as in the "cherry" example). 
+Similarly, for C code with no dependencies on external libraries, it suffices to say where the sources are and LuaRocks will invoke the appropriate compiler and linker for the platform. You can use a simple string value for single-file modules, such as the "banana" example above or an array value for multiple source files (as in the "cherry" example).
+
+To make writing rocks for projects with a common directory layout even easier, the "builtin" build type recursively copies all files and directories it finds in a folder called "./lua" (if it exists) to the same place as other Lua files.  It's almost as an entry had been added to `modules` for every file in `lua`, except that the files will only be copied - files ending in ".c" won't be compiled.
 
 ==== Depending on other rocks ====
 
