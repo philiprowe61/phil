@@ -1,3 +1,9 @@
+'''Version 2.2.1''' - 17/Mar/2015 - [http://luarocks.org/releases/luarocks-2.2.1.tar.gz download]
+
+* Improved compatibility with Lua 5.3
+* `luarocks list --outdated` for listing modules with available upgrades
+* Assorted bugfixes
+
 '''Version 2.2.0''' - 15/Aug/2014 - [http://luarocks.org/releases/luarocks-2.2.0.tar.gz download]
 
 * MoonRocks is the new default repository: http://rocks.moonscript.org - Rocks don't need to be sent to the LuaRocks mailing list anymore, you can upload them directly at the website or using...
