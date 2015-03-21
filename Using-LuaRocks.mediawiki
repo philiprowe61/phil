@@ -18,11 +18,22 @@ Installing packages is done by typing commands such as:
 
  luarocks install luasocket
 
-==== The Lua libraries path ====
+==== Rocks trees and the Lua libraries path ====
+
+Most installations will feature two rocks trees:
+
+* "system" [[Rocks repositories|rock tree]] (used by default)
+* "user" [[Rocks repositories|rock tree]]
 
 To use modules installed with LuaRocks, all you need to do is make sure they are found by Lua's module loading mechanism. The exact location depends on your installation flags, and how to set up the Lua modules path depends on your Lua interpreter and your application: you can use the LUA_PATH and LUA_CPATH environment variables, or update the value of the <code>package.path</code> and <code>package.cpath</code> variables from Lua code. This can't be any more vague.
 
 If you installed the Lua interpreter bundled with LuaRocks on Windows, or if you built both Lua and LuaRocks on Unix with the default paths, the default library path settings will be already appropriate.
+
+If your Lua paths are not already set correctly, you can use the following command:
+
+ luarocks path --bin
+
+It will print commands suitable for your platform for setting up your environment.
 
 ==== Multiple versions using the LuaRocks package loader ====
 
@@ -42,6 +53,10 @@ If your system is correctly set up so that this command runs with no errors, sub
 
 Besides modules, rocks can also install command-line scripts. The default location of this directory (unless you configured your local repository differently) is /usr/local/bin for system-wide installs and ~/.luarocks/bin for per-user installs on Unix and %APPDATA%/luarocks/bin on Windows -- make sure it is in your PATH as well.
 
+If you use the <code>--bin</code> argument in <code>luarocks path</code>, it will also print the appropriate PATH configuration:
+
+ luarocks path --bin
+
 ==== Using in Unix systems with sudo ====
 
 When you use LuaRocks to install a package while you aren't root, the package will get installed in $HOME/.luarocks/ instead of the system-wide (by default, /usr/local/) and become only available for you. Moreover Lua doesn't know with its default setup that packages can be available in the current user's home. If you want to install a package available for all users, you should run it as superuser, typically using sudo.
@@ -55,3 +70,7 @@ For example:
 
  cd /usr/local/share/lua/5.1
  sudo chmod a+r *
+
+== Using a C compiler ==
+
+Because rocks are generally available in the repository as source rocks rather than binary rocks, it is probably best to have a C compiler available. On Windows, MinGW and Microsoft compilers are supported. The compiler should be in the system path, or explicitly configured in the LuaRocks config files.
