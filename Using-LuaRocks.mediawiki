@@ -77,4 +77,4 @@ Because rocks are generally available in the repository as [[Types of rocks|sour
 
 On Windows, MinGW and Microsoft compilers are supported. The compiler should be in the system path, or explicitly configured in the LuaRocks config files. On Windows systems, one way of getting the compiler in the system path is to open the appropriate command prompt as configured by your compiler package (for example, the MSVC Command Prompt for Visual Studio).
 
-Note that for compiling binary rocks that have dependencies on other libraries, LuaRocks needs to be able to find [[external dependencies]].
+Note that for compiling binary rocks that have dependencies on other libraries, LuaRocks needs to be able to find [[Paths and external dependencies|external dependencies]].
