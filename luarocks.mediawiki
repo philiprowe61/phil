@@ -15,6 +15,8 @@ Variables from the "variables" table of the [[Config file format|configuration f
 |-
 | --tree=''tree'' || Which tree to operate on.
 |-
+| --local || Use the tree in the user's home directory. To enable it, see <code>luarocks [[path]]</code>
+|-
 | --deps-mode=''mode'' || Select dependencies mode:
 How to handle the list of rocks servers given in the rocks_servers array in the [[Config file format|config file]].
 * '''one''' - Consider only the tree at the top of the list (possibly, the one given by the --tree flag, overriding all entries from rocks_trees), ignore all others
@@ -23,6 +25,10 @@ How to handle the list of rocks servers given in the rocks_servers array in the 
 ** the one at the bottom of the rocks_trees list,
 ** or one explicitly given with --tree
 ** or the "home" tree if --local was given or local_by_default=true is configured (usually at the top of the list)
+|-
+| --verbose || Display verbose output of commands executed.
+|-
+| --timeout || Timeout on network operations, in seconds.  0 means no timeout (wait forever). Default is 30.
 |}
 
 
@@ -31,19 +37,27 @@ How to handle the list of rocks servers given in the rocks_servers array in the 
 {| cellspacing=0px cellpadding=10px border=1px bordercolor=black align=center
 | [[build]]   || Build/compile and install a rock.
 |-
+| [[doc]]     || Shows documentation for an installed rock.
+|-
 | [[download]]|| Download a specific rock or rockspec file from a rocks server.
 |-
 | [[help]]    || Help on commands.
 |-
 | [[install]] || Install a rock.
 |-
+| [[lint]]    || Check syntax of a rockspec.
+|-
 | [[list]]    || Lists currently installed rocks.
 |-
 | [[make]]    || Compile package in current directory using a rockspec and install it.
 |-
+| [[new_version]] || Auto-write a rockspec for a new version of a rock.
+|-
 | [[pack]]    || Create a rock, packing sources or binaries.
 |-
 | [[path]]    || Return the currently configured package path.
+|-
+| [[purge]]   || Remove all installed rocks from a tree.
 |-
 | [[remove]]  || Uninstall a rock.
 |-
@@ -52,6 +66,10 @@ How to handle the list of rocks servers given in the rocks_servers array in the 
 | [[show]]    || Shows information about an installed rock.
 |-
 | [[unpack]]  || Unpack the contents of a rock.
+|-
+| [[upload]]  || Upload a rockspec to the public rocks repository.
+|-
+| [[write_rockspec]]  || Write a template for a rockspec file.
 |}
 
 
