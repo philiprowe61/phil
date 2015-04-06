@@ -22,6 +22,10 @@ For example, a [[Rockspec format|rockspec]] can define an external dependency li
 
 and this will result in searches for libfoo.a or libfoo.so on Unix systems, and foo.lib or foo.dll on Windows. For entries that have more than one pattern, such as lib, only one entry needs to be satisfied.
 
+In other words, the value "foo" you see in the external_dependencies.FOO.library entry is the same value you would use when linking the library, for example -lfoo. In addition, once you added FOO in the external_dependencies, this means you can pass entries such as FOO_DIR and FOO_LIBDIR to the <code>luarocks</code> command-line tool, in case you have these libraries in non-standard locations. For example, if the user installed the library in a custom location in their own home directory, it would still be usable, like this:
+
+   luarocks install my_rockspec_using_foo-1.0-1.rockspec FOO_LIBDIR=/home/joeuser/foo/lib
+
 When performing external dependency checks during installation (as opposed to build) of rocks, static libraries and headers are not searched. The '''runtime_external_deps_patterns''' table is used instead.
 
 == When filenames don't match ==
