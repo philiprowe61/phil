@@ -15,4 +15,5 @@ Tasks performed when making a new LuaRocks release:
 * Edit current version number in [[Download]] page in the wiki
 * Run `git diff v$PREV_VERSION v$VERSION` to write a changelog summary
 * Edit [[Release history]] to add new release, including changelog
+* Submit PR to http://github.com/leafo/luarocks-site updating static/md/home.md to new release
 * Write \[ANN\] email for lua-l@lists.lua.org and luarocks-developers@lists.sf.net, usually a variation of the previous announcement
