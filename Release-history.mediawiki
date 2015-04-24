@@ -1,3 +1,14 @@
+'''Version 2.2.2''' - 24/Apr/2015 - [http://luarocks.org/releases/luarocks-2.2.2.tar.gz download]
+
+* `luarocks build --only-deps` and `luarocks install --only-deps` for installing dependencies only
+* Mercurial support
+* Improved command-line argument parser, now validates arguments (it previously ignored unrecognized arguments) and accepts both `--flag=option` and `--flag option` in flags that take arguments.
+* For consistency with `luarocks show`, `luarocks doc --homepage` is now `luarocks doc --home`
+* Improvements to CMake build backend
+* Various bugfixes
+
+* Improved Makefiles for handling simultaneous bootstrapped installations
+
 '''Version 2.2.1''' - 17/Mar/2015 - [http://luarocks.org/releases/luarocks-2.2.1.tar.gz download]
 
 * Improved compatibility with Lua 5.3
