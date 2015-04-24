@@ -5,7 +5,8 @@ Tasks performed when making a new LuaRocks release:
 * Run `makedist $VERSION`
 * Copy `luarocks-$VERSION.tar.gz` and `luarocks-$VERSION-win32.zip` to `gh-pages/releases`
 * Edit `gh-pages/releases/index.html` to add links to both files
-* `git add` and `git commit` both files
+* `git add` new files, `git commit` everything
+* `git push` the gh-pages branch
 * `git commit` changes to `rockspec` and `src/luarocks/cfg.lua`
 * `git tag v$VERSION`
 * `git push --tags`
