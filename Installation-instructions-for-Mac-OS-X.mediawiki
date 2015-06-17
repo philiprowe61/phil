@@ -8,9 +8,9 @@ If you already have it installed, make sure it is up to date so you pick the mos
 
    brew update
 
-and then install LuaRocks with:
+and then install Lua - by default Lua comes with LuaRocks. You can install Lua with:
 
-   brew install luarocks
+   brew install lua
 
 == Option 2: installing it manually ==
 
