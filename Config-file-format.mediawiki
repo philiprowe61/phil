@@ -55,11 +55,11 @@ Such entries should not be added by the user in the configuration file, as they 
 As the config file itself is a Lua code file, there is some possibility to execute Lua code. Because it is run in a sandbox this is very limited, but might still be useful.
 
 What LuaRocks makes available;
-* parameters/values; several values are made available to the config file (pre-loaded in the sandbox) and include things like processor, platform, rocktrees, etc.
-* function: os_getenv(varname); this is the regular Lua function `os.getenv()` and allows one to fetch environment variable values from the OS.
-* function: dump_env(); this will dump a list of all variables provided by LuaRocks as a debug aid.
+* parameters/values; several values are made available to the config file (pre-loaded in the sandbox) and include things like processor, platform, rocktrees, etc. (see '''dump_env()''' below)
+* function: '''os_getenv(varname)'''; this is the regular Lua function `os.getenv()` and allows one to fetch environment variable values from the OS.
+* function: '''dump_env()'''; this will dump a list of all variables provided by LuaRocks as a debug aid.
 
-To test this, add a line `dump_env()` to your config file and execute `luarocks` on the commandline to see the results.
+To test this, add a line '''dump_env()''' to your config file and execute '''luarocks''' on the commandline to see the results.
 
 == Other ==
 
