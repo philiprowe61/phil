@@ -6,7 +6,7 @@ Addons are used to introduce new, optional behavior to LuaRocks. They may introd
 
 **TODO**: New flags for existing commands is a planned feature.
 
-An addon named `$a` is the lua module `luarocks.addon.$a`. There are two entry points to the addon, `run` and `load`, which correspond to two ways of activating the addon, either by calling the eponymous subcommand of LuaRocks, or using the addon through a rockspec.
+An addon named `$a` is the Lua module `luarocks.addon.$a`. There are two entry points to the addon, `run` and `load`, which correspond to two ways of activating the addon, either by calling the eponymous subcommand of LuaRocks, or using the addon through a rockspec.
 
 *   When an addon is installed, an eponymous subcommand of LuaRocks is automatically enabled; e.g. with `luarocks.addon.test` installed, the user may use `luarocks test ...`. When this subcommand is called, the `run` function of the addon is called with the command line arguments.
 
@@ -34,6 +34,8 @@ The addon should then make use of the `luarocks.api` module to alter the behavio
         api.register_rockspec_field(
             "build.foo", {_type="string"}, function(foo, rockspec)
                 print("package="..rockspec.package..", foo="..foo)
+            end
+        )
 
     The new field must not collide with existing ones - neither builtin fields like `package` or `build`, nor those registered by other addons. In case of registering a new subfield, all but the last one component must exist; registering `a.b.c.d` requires that `a`, `a.b`, `a.b.c` exist, but `a.b.c.d` should not.
 
