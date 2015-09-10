@@ -40,4 +40,4 @@ Add or amend the following rules in your Makefile.am:
 
  DISTCLEANFILES = $(PACKAGE).rockspec
 
-You can use [http://github.com/rrthomas/woger/ woger] to automate your releases, emailing rockspecs to the luarocks list and announcements to the Lua mailing list. The details are evolving, so see woger itself for details, and a frequently-updated project such as [http://github.com/luaposix/luaposix/ luaposix] for example Makefile.am code.
+You can use [http://github.com/rrthomas/woger/ woger] to automate your releases, uploading rockspecs to luarocks.org and announcements to the Lua mailing list. The details are evolving, so see woger itself for details, and a frequently-updated project such as [http://github.com/luaposix/luaposix/ luaposix] for example Makefile.am code.
