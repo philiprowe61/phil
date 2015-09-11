@@ -98,7 +98,7 @@ Suppose we need the modules from the "luaknife" rock, in order to cut our fruits
 
 Note that the dependency on a specific Lua version is also given in that table, and that it uses a special operator that's not a standard Lua operator. It was inspired by the "pessimistic operator" of RubyGems: "~> 2" means ">= 2, &lt; 3"; "~> 2.4" means ">= 2.4, &lt; 2.5". Using "lua ~> 5.1" we're saying that our code works only on Lua 5.1 and doesn't work with Lua 5.2.
 
-Many modules can be written to run in both Lua 5.1 and 5.2, so the dependency can be written instead as "lua >= 5.1, < 5.3". All operators from the comma-separated list must be satisfied. For this reason, we can't use ~> in that case because "lua >= 5.1, ~> 5.2" means "lua >= 5.1, >= 5.2, < 5.3", which would make it reject Lua 5.1.
+Many modules can be written to run in both Lua 5.1 and 5.2, so the dependency can be written instead as "lua >= 5.1, < 5.3". All operators from the comma-separated list must be satisfied. For this reason, we can't use ~> in that case because "lua >= 5.1, ~> 5.2" means "lua >= 5.1, >= 5.2, &lt; 5.3", which would make it reject Lua 5.1.
 
 ==== C modules linking to external libraries ====
 
