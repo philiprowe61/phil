@@ -11,7 +11,7 @@ To get a default installation of Lua and LuaRocks under /usr/local:
 * Install Lua, using the appropriate methods for your system.
 * Download and unpack the LuaRocks tarball.
 * Run "./configure". (This will attempt to detect your installation of Lua. If you get any error messages, see the section "Customizing your settings", below.)
-* Run "make".
+* Run "make build".
 * As superuser, run "make install".
 
 == The default settings ==
