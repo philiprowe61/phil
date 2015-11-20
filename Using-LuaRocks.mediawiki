@@ -16,24 +16,58 @@ You can get help on any command by using the [[help]] command:
 
 Installing packages is done by typing commands such as:
 
- luarocks install luasocket
+ luarocks install dkjson
 
 == Rocks trees and the Lua libraries path ==
 
-Most installations will feature two rocks trees:
+When you install rocks using the <code>luarocks install</code>, you get new modules available for loading via <code>require()</code> from Lua. For example, after we install the dkjson rock, type <code>luarocks show dkjson</code> to show the module installed by the rock:
+
+  luarocks show dkjson
+
+This should output something like this:
+
+  dkjson 2.5-2 - David Kolf's JSON module for Lua
+  
+  dkjson is a module for encoding and decoding JSON data. It supports UTF-8.
+  
+  JSON (JavaScript Object Notation) is a format for serializing data based on the
+  syntax for JavaScript data structures.
+  
+  dkjson is written in Lua without any dependencies, but when LPeg is available
+  dkjson uses it to speed up decoding.
+  
+  License: 	MIT/X11
+  Homepage: 	http://dkolf.de/src/dkjson-lua.fsl/
+  Installed in: 	/usr/local
+  
+  Modules:
+  	dkjson (/usr/local/share/lua/5.3/dkjson.lua)
+
+It presents a short description of the rock, its license, and the list of modules it provides (in this case, only one, <code>dkjson</code>). Note that "Installed in:" shows the directory tree where the rock was installed. This is the "rocks tree" in use.
+
+Most LuaRocks installations will feature two rocks trees:
 
 * "system" [[Rocks repositories|rock tree]] (used by default)
 * "user" [[Rocks repositories|rock tree]]
 
-To use modules installed with LuaRocks, all you need to do is make sure they are found by Lua's module loading mechanism. The exact location depends on your installation flags, and how to set up the Lua modules path depends on your Lua interpreter and your application: you can use the LUA_PATH and LUA_CPATH environment variables, or update the value of the <code>package.path</code> and <code>package.cpath</code> variables from Lua code. This can't be any more vague.
+To be able to use the module, we need to make sure that Lua can find that dkjson.lua file when we run <code>require("dkjson")</code>. You can check your Lua paths from the Lua environment, using
 
-If you installed the Lua interpreter bundled with LuaRocks on Windows, or if you built both Lua and LuaRocks on Unix with the default paths, the default library path settings will be already appropriate.
+  print(package.path)
+  print(package.cpath)
 
-If your Lua paths are not already set correctly, you can use the following command:
+These variables can be pre-configured from outside Lua, using the LUA_PATH and LUA_CPATH environment variables. 
 
- luarocks path --bin
+If you installed both Lua and LuaRocks in their default directories (/usr/local on Linux and Mac OSX), then the "system" tree is /usr/local and it will work by default. However, the "user" tree (for installing rocks without admin privileges) is not detected by Lua by default. For that we'll need to configure these environment variables.
 
-It will print commands suitable for your platform for setting up your environment.
+LuaRocks offers a semi-automated way to do this. If you type the following command:
+
+  luarocks path --bin
+
+...it will print commands suitable for your platform for setting up your environment. On typical Unix terminal environments, you can type this:
+
+  eval $(luarocks path --bin)
+
+and it apply the changes, temporarily, to your shell. To have these variables set permanently, you have to configure the environment variables to your shell configuration (for example, by adding the above line to your <code>.bashrc</code> file if your shell is Bash).
 
 == Multiple versions using the LuaRocks package loader ==
 
