@@ -1,4 +1,8 @@
-The LuaRocks configuration file is a Lua file containing assignments. Default values are assumed for variables that are not assigned explicitly in the configuration file. The location of the configuration file can be configured through flags during installation. If no --force-config or /FORCECONFIG flags were used on installation, the LUAROCKS_CONFIG environment variable can be used as well (or for a particular Lua version, LUAROCKS_CONFIG_5_2, similar to the LUA_PATH_5_2 feature introduced in Lua 5.2). The default value is platform-dependent; exact paths depends on flags given during installation, but on Unix systems it would be something like $PREFIX/etc/luarocks/config.lua; on Windows systems, c:\luarocks\config.lua.
+The LuaRocks configuration file is a Lua file containing assignments. Default values are assumed for variables that are not assigned explicitly.
+
+The location of the configuration file can be configured through flags during installation. If no <code>--force-config</code> or <code>/FORCECONFIG</code> flags were used on installation, the <code>LUAROCKS_CONFIG</code> environment variable can be used as well (or for a particular Lua version, <code>LUAROCKS_CONFIG_5_2</code>, similar to the <code>LUA_PATH_5_2</code> feature introduced in Lua 5.2).
+
+The default value is platform-dependent; exact paths depend on flags given during installation, but on Unix systems it would be something like <code>$PREFIX/etc/luarocks/config.lua</code>; on Windows systems, <code>c:\luarocks\config.lua</code>.
 
 == Locations ==
 
