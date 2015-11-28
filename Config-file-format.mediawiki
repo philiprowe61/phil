@@ -13,6 +13,7 @@ The default value is platform-dependent; exact paths depend on flags given durin
 * '''external_deps_dirs''' (array of strings) - Where to look for external dependencies, when a prefix is not set for a specific dependency in the _variables_ table (see below) or through the command-line. Default is { "/usr/local", "/usr" } on Unix; { "c:\\external" } on Windows.
 * '''external_deps_subdirs''' (table with string keys and string values) - Subdirectories to be used in conjunction with external_deps_dirs. Specifies where to look for specific types external dependencies. This can be overriden, for example, on Linux distributions which feature multiarch libraries and libraries are no longer in the "lib" subdir. Default is { bin = "bin", lib = "lib", include = "include" }.
 * '''runtime_external_deps_subdirs''' (table with string keys and string values) - Same as the above, to be used with ''luarocks install''.
+* '''lib_modules_path''' (string) - The path where modules with native C extensions will be installed. If you are using a x86_64 *nix OS, you will probably need this line in <code>config.lua</code>: <code>lib_modules_path="/lib64/lua/"..lua_version</code>. See [https://github.com/keplerproject/luarocks/issues/416 issue 416].
 
 == File upload ==
 
