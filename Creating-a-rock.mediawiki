@@ -35,7 +35,7 @@ A rockspec is actually a Lua file, but it is loaded in an empty environment, so 
 
 This should be saved in a file called luafruits-1.0-1.rockspec. The name must contain lowercase versions of the "package" and "version" fields, or else LuaRocks will complain.
 
-There is some missing stuff in our rockspec which we will fill later, such as the source.url and source.homepage fields. We'll add those when we upload our sources whatever server you choose to.
+There is some missing stuff in our rockspec which we will fill later, such as the source.url and description.homepage fields. We'll add those when we upload our sources whatever server you choose to.
 
 Right now our focus will be on the "build" section.
 
@@ -237,7 +237,7 @@ We're ready to complete our rockspec. By now it will look like this:
 
 == Submitting a rockspec for inclusion in the rocks server ==
 
-This is the simplest step: just create an account at [https://rocks.moonscript.org/register] and upload your rockspec. It will automatically be included in the in the public LuaRocks repository once the mirror propagates the change. Users of LuaRocks >= 2.2 will be able to download your package immediatley. We will usually publish both the .rockspec file and the appropriate .rock file in the server.
+This is the simplest step: just create an account at [https://rocks.moonscript.org/register] and upload your rockspec. It will automatically be included in the public LuaRocks repository once the mirror propagates the change. Users of LuaRocks >= 2.2 will be able to download your package immediatley. We will usually publish both the .rockspec file and the appropriate .rock file in the server.
 
 You can also create .rock files yourself. If you run the "pack" command on your rockspec, like this:
 
