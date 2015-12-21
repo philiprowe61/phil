@@ -118,11 +118,3 @@ LuaRocks will analyse the executable found.
 == Next steps ==
 
 Once LuaRocks is installed, learn more about [[Using LuaRocks|using LuaRocks]].
-
-----
-
-== Installing over "Lua for Windows" ==
-
-<i>Need some information on this too....</i>
-
-<references/>
