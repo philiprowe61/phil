@@ -237,7 +237,7 @@ We're ready to complete our rockspec. By now it will look like this:
 
 == Submitting a rockspec for inclusion in the rocks server ==
 
-This is the simplest step: just create an account at [https://rocks.moonscript.org/register] and upload your rockspec. It will automatically be included in the public LuaRocks repository once the mirror propagates the change. Users of LuaRocks >= 2.2 will be able to download your package immediatley. We will usually publish both the .rockspec file and the appropriate .rock file in the server.
+This is the simplest step: just create an account at [https://luarocks.org/register] and upload your rockspec. It will automatically be included in the public LuaRocks repository once the mirror propagates the change. Users of LuaRocks >= 2.2 will be able to download your package immediatley. We will usually publish both the .rockspec file and the appropriate .rock file in the server.
 
 You can also create .rock files yourself. If you run the "pack" command on your rockspec, like this:
 
