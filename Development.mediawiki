@@ -2,7 +2,7 @@ Documentation items related to the development of LuaRocks.
 
 == Implementation ==
 
-The implementation is documented using LuaDoc. You can [http://luarocks.luaforge.net/luadoc/ browse the generated documentation] online.
+The implementation is documented using inline comments in [https://github.com/keplerproject/luadoc LuaDoc] format. You can [http://luarocks.luaforge.net/luadoc/ browse the generated documentation] online (very outdated).
 
 == Development docs ==
 
