@@ -62,9 +62,15 @@ This means that in the above examples, we'd have several identical one-liner fil
 With those empty manifests, the post-install operation mentioned above works and a later `luarocks install` will the existence of the "rocks" in /usr, given the following configuration in `/etc/luarocks/config-5.3.lua`:
 
 ```
-rocks_trees = { home.."/.luarocks", "/usr/local", "/usr" }
+rocks_trees = {
+   { name = "user", root = home.."/.luarocks" },
+   { name = "distro-modules", root = "/usr" },
+   { name = "system", root = "/usr/local" },
+}
 deps_mode = "all"
 ```
+
+It's important that the "system" tree is the last entry: it is the one used for system-wide installation of rocks using LuaRocks (when `sudo luarocks` is used). The "distro-modules" tree should never be used directly by the user.
 
 For more info on the deps_mode flag, see the [Dependency modes](https://github.com/keplerproject/luarocks/wiki/Dependencies#Dependency_modes) documentation.
 
