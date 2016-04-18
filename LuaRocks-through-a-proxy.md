@@ -16,7 +16,7 @@ If you are behind a firewall that blocks the `git://` protocol, you may configur
 
     git config --global url."https://".insteadOf git://
 
-This adds the following to your ~/.gitconfig:
+This adds the following to your `~/.gitconfig`:
 
     [url "https://"]
        insteadOf = git://
