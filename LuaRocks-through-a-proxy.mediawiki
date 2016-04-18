@@ -1,9 +1,4 @@
-LuaRocks performs network access through helper applications: curl (on Mac OSX) or wget (on other platforms). Both of them use the same method to configure proxies: the http_proxy and ftp_proxy environment variables.
-
-Additionally, a ''proxy'' value must be added to config.lua:
-
-  proxy = "http://server:1234"
-
+LuaRocks performs network access through either helper applications (typically `curl` on Mac OSX, or `wget` on other platforms), or using built-in modules LuaSocket and LuaSec. All of them use the same method to configure proxies: the `http_proxy`, `https_proxy` and `ftp_proxy` environment variables.
 
 == Environment variable example ==
 
