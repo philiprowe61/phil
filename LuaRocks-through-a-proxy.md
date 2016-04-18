@@ -10,7 +10,19 @@ On Windows systems, the command syntax is:
 
     set http_proxy=http://server:1234
 
+## Git
+
+If you are behind a firewall that blocks the `git://` protocol, you may configure your Git to use HTTPS instead. The solution is to tell Git to always use HTTPS instead of `git://` by running the following command:
+
+    git config --global url."https://".insteadOf git://
+
+This adds the following to your ~/.gitconfig:
+
+    [url "https://"]
+       insteadOf = git://
+
 ## External references
 
 * [curl manpage](http://www.hmug.org/man/1/curl.php)
-* [How to use wget through proxy](http://blog.taragana.com/index.php/archive/how-to-use-wget-through-proxy/)
+* ["How to use wget through proxy"](http://blog.taragana.com/index.php/archive/how-to-use-wget-through-proxy/)
+* ["Tell git to use https instead of git protocol"](http://jgoodall.me/posts/2013/05/29/git-use-https)
