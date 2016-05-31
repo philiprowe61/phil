@@ -2,9 +2,9 @@
 
 == Usage ==
 
-:'''[[luarocks]] show ''package'' '''
+:'''[[luarocks]] show package '''
 
-<argument> is an installed package name.
+''package'' is an installed package name.
 Without any flags, show all module information.
 With these flags, return only the desired information:
 
@@ -13,7 +13,7 @@ With these flags, return only the desired information:
 * '''--deps''' - packages this package depends on
 * '''--rockspec''' - the full path of the rockspec file
 * '''--mversion''' - the package version
-* '''--tree''' - local tree where rock is installed
+* '''--rock-tree''' - local tree where rock is installed
 * '''--rock-dir''' - data directory of the installed rock
 
 == Example ==
