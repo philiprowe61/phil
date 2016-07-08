@@ -237,9 +237,11 @@ We're ready to complete our rockspec. By now it will look like this:
 
 == Submitting a rockspec for inclusion in the rocks server ==
 
+=== Web upload === 
 This is the simplest step: just create an account at [https://luarocks.org/register] and upload your rockspec. It will automatically be included in the public LuaRocks repository once the mirror propagates the change. Users of LuaRocks >= 2.2 will be able to download your package immediately. We will usually publish both the .rockspec file and the appropriate .rock file in the server.
 
-You can also create .rock files yourself. If you run the "pack" command on your rockspec, like this:
+=== Pack command ===
+You can also create .rock files yourself. If you run the [pack](pack) command on your rockspec, like this:
 
  luarocks pack luafruits-1.0-1.rockspec
 
@@ -250,6 +252,13 @@ If you have the rock installed in your local tree, you can also pack the binarie
  luarocks pack luafruits
 
 (The version is optional, latest is assumed.) This will create a file with a name such as luafruits-1.0-1.linux-x86.rock.
+
+=== Upload command ===
+When you've verified that creating the rock works, you can upload it to the LuaRocks server with the [upload](upload) command:
+
+  luarocks upload luafruits-1.0-1.rockspec --api-key=<your API key>
+
+You can get an API from the [settings page of your account on the LuaRocks web site](https://luarocks.org/settings/api-keys).
 
 == Conclusion ==
 
