@@ -1,6 +1,6 @@
 <p align="center"><img src="http://keplerproject.github.io/luarocks/luarocks_500px.png" width="100"/></p>
 
-This is '''LuaRocks''', a deployment and management system for Lua modules.
+This is '''LuaRocks''', the package manager for the Lua programming language.
 
 LuaRocks allows you to install Lua modules as self-contained packages called "[[Types of rocks|rocks]]", which also contain dependency information. LuaRocks supports both local and remote repositories, and multiple local rocks trees.
 
