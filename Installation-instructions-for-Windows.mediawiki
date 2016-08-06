@@ -1,3 +1,5 @@
+First of all, get the [http://keplerproject.github.io/luarocks/releases latest "win32.zip" package here].
+
 The LuaRocks package for Windows is an all-in-one package which includes
 everything you need to run LuaRocks, including helper binaries and a
 Lua interpreter. (You can use your own Lua interpreter if you already have
