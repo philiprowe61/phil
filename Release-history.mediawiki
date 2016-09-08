@@ -1,4 +1,4 @@
-'''Version 2.4.0''' - 09/Jan/2016 - [http://luarocks.org/releases/luarocks-2.4.0.tar.gz All Unix] - [http://luarocks.org/releases/luarocks-2.4.0-win32.zip Windows]
+'''Version 2.4.0''' - 08/Sep/2016 - [http://luarocks.org/releases/luarocks-2.4.0.tar.gz All Unix] - [http://luarocks.org/releases/luarocks-2.4.0-win32.zip Windows]
 
 * New test suite based on Busted; runs on Linux, OSX and Windows
 * git+ssh:// fetch protocol
