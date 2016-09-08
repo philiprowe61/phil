@@ -1,3 +1,16 @@
+'''Version 2.4.0''' - 09/Jan/2016 - [http://luarocks.org/releases/luarocks-2.4.0.tar.gz All Unix] - [http://luarocks.org/releases/luarocks-2.4.0-win32.zip Windows]
+
+* New test suite based on Busted; runs on Linux, OSX and Windows
+* git+ssh:// fetch protocol
+* Improved behavior preserving permissions
+* Improved listing of dependencies on installation
+* Improved behavior of argument handling in `pack`
+* MSYS and Haiku platform detection
+* Feature-based detection of internal bit32 and utf8 modules
+* Internal reorganization of luarocks.fs code
+* `remove` option --force=fast renamed to --force-fast
+* Plus assorted bugfixes and cleanups
+
 '''Version 2.3.0''' - 09/Jan/2016 - [http://luarocks.org/releases/luarocks-2.3.0.tar.gz All Unix] - [http://luarocks.org/releases/luarocks-2.3.0-win32.zip Windows]
 
 * Windows: major redesign of the install tree structure
