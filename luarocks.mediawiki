@@ -39,7 +39,7 @@ How to handle the list of rocks servers given in the rocks_servers array in the 
 |-
 | [[doc]]     || Shows documentation for an installed rock.
 |-
-| [[download]]|| Download a specific rock or rockspec file from a rocks server.
+| [[download (command)|download]]|| Download a specific rock or rockspec file from a rocks server.
 |-
 | [[help]]    || Help on commands.
 |-
