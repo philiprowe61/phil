@@ -2,7 +2,7 @@
 
 ## Usage
 
-`luarocks unpack --force {<rock> | <rockspec> | <name> [<version>]}`
+`luarocks unpack [--force] {<rock> | <rockspec> | <name> [<version>]}`
 
 Unpacks the contents of a rock in a newly created directory under the current directory. Argument may be a rock file, a rockspec file, or the name of a rock/rockspec in a remote repository.
 
