@@ -2,7 +2,7 @@
 
 ## Usage
 
-`luarocks show [--home] [--list] <name> [<version>]`
+`luarocks doc [--home] [--list] <name> [<version>]`
 
 Attempts to open documentation for an installed rock using a number
 of heuristics.
