@@ -1,10 +1,10 @@
-LuaRocks is free software: it can be used for both academic and commercial purposes at absolutely no cost. There are no royalties or GNU-like "copyleft" restrictions. LuaRocks qualifies as [http://www.opensource.org/docs/definition.html Open Source] software. Its licenses are compatible with the [http://www.gnu.org/licenses/gpl.html GPL]. LuaRocks is not in the public domain and the [http://www.keplerproject.org/ Kepler Project] keeps its copyright. The legal details are below.
+LuaRocks is free software: it can be used for both academic and commercial purposes at absolutely no cost. There are no royalties or GNU-like "copyleft" restrictions. LuaRocks qualifies as [http://www.opensource.org/docs/definition.html Open Source] software. Its licenses are compatible with the [http://www.gnu.org/licenses/gpl.html GPL]. LuaRocks is not in the public domain and the [https://github.com/keplerproject Kepler Project] keeps its copyright. The legal details are below.
 
 The spirit of the license is that you are free to use LuaRocks for any purpose at no cost without having to ask us. The only requirement is that if you do use LuaRocks, then you should give us credit by including the appropriate copyright notice somewhere in your product or its documentation.
 
 ----
 
-Copyright © 2007-2011 Kepler Project.
+Copyright © 2007-2016 Kepler Project.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
