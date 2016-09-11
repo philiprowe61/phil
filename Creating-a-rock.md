@@ -26,7 +26,8 @@ So, you wrote a Lua package (containing one or more modules) and want to make it
 
 A rockspec file is the metadata file for your package, containing all the information LuaRocks needs in order to fetch, build and install your package. The [[Rockspec format]] supports various kind of build systems, but in this tutorial we'll use LuaRocks's own built-in build system -- that's why we're listing "Writing a rockspec" as the first step. We'll use the rockspec in place of a Makefile.
 
-A rockspec is actually a Lua file, but it is loaded in an empty environment, so there are no Lua functions available. A skeleton for a basic rockspec looks like this:
+A rockspec is actually a Lua file, but it is loaded in an empty environment, so there are no Lua functions available. A skeleton for a basic rockspec looks can be written by hand or generated using [[write_rockspec]].
+It may look like this:
 
 ```lua
 package = "LuaFruits"
@@ -45,7 +46,7 @@ description = {
    license = "MIT/X11" -- or whatever you like
 }
 dependencies = {
-   "lua ~> 5.1"
+   "lua >= 5.1, < 5.4"
    -- If you depend on other rocks, add them here
 }
 build = {
@@ -117,20 +118,21 @@ Suppose we need the modules from the "luaknife" rock, in order to cut our fruits
 
 ```lua
 dependencies = {
-   "lua ~> 5.1",
+   "lua >= 5.1, < 5.4",
    "luaknife >= 2.3"
 }
 ```
 
-Note that the dependency on a specific Lua version is also given in that table, and that it uses a special operator that's not a standard Lua operator. It was inspired by the "pessimistic operator" of RubyGems: "~> 2" means ">= 2, &lt; 3"; "~> 2.4" means ">= 2.4, &lt; 2.5". Using "lua ~> 5.1" we're saying that our code works only on Lua 5.1 and doesn't work with Lua 5.2.
-
-Many modules can be written to run in both Lua 5.1 and 5.2, so the dependency can be written instead as "lua >= 5.1, < 5.3". All operators from the comma-separated list must be satisfied. For this reason, we can't use ~> in that case because "lua >= 5.1, ~> 5.2" means "lua >= 5.1, >= 5.2, &lt; 5.3", which would make it reject Lua 5.1.
+Note that the dependency on Lua itself is also given in that table, and that it uses two constraints
+on its version at once: `>= 5.1` and `< 5.4`. When several constraints are used like this,
+they all have to be satisfied. Therefore, `lua >= 5.1, < 5.4` means that our rock supports Lua `5.1`, `5.2`, and `5.3`, but not yet-to-be-released `5.4`. There are a few other operators for specifying version
+constraints, see [[dependency information format|Rockspec-format#dependency-information]].
 
 #### C modules linking to external libraries
 
 *If your code does not use third-party libraries, you may skip this subsection.*
 
-For building C code that links to C libraries, you can use the long syntax given in the "date" example above, in which sources are listed in the "sources" subtable. You need to specify the libraries to be linked in the "libraries" subtable. The library name is specified in a platform-independent way: in the above example, libraries={"date"} will result in -ldate for GCC on Unix and DATE.LIB for MSVC on Windows. (Note that if this is not appropriate, the rockspec format allows [[per-platform overrides|Platform overrides]].) If you need to link code that uses libraries, you need to tell LuaRocks where to find them. You do this by adding a new section to the rockspec:
+For building C code that links to C libraries, you can use the long syntax given in the "date" example above, in which sources are listed in the "sources" subtable. You need to specify the libraries to be linked in the "libraries" subtable. The library name is specified in a platform-independent way: in the above example, `libraries={"date"}` will result in `-ldate` for GCC on Unix and `DATE.LIB` for MSVC on Windows. (Note that if this is not appropriate, the rockspec format allows [[per-platform overrides|Platform overrides]].) If you need to link code that uses libraries, you need to tell LuaRocks where to find them. You do this by adding a new section to the rockspec:
 
 ```lua
 external_dependencies = {
@@ -140,9 +142,9 @@ external_dependencies = {
 }
 ```
 
-Adding the "external_dependencies" table will make LuaRocks search for the external dependencies in its lookup path (on Unix the defaults are /usr/local and /usr; on Windows, which doesn't have a standard for development trees, you'll probably have to specify  yourself through the [[config file|Config file format]] or the [[command-line|luarocks]] when invoking "luarocks"). We give a hint to LuaRocks, the libdate.h header, so it can test whether the development package is really there (on many Linux distros, one needs to install "-dev" packages in order to have all headers and libraries needed for compilation available, so header files are a good hint). In this case, for example, it would look for /usr/local/include/libdate.h and /usr/include/libdate.h on Unix. If you (or your users) have LibDate installed elsewhere, it's always possible to tell LuaRocks so through the command-line, passing for example LIBDATE_DIR=/opt/libdate as an argument.
+Adding the "external_dependencies" table will make LuaRocks search for the external dependencies in its lookup path (on Unix the defaults are `/usr/local` and `/usr`; on Windows, which doesn't have a standard for development trees, you'll probably have to specify it yourself through the [[config file|Config file format]] or the [[command-line|luarocks]] when invoking "luarocks"). We give a hint to LuaRocks, the `libdate.h` header, so it can test whether the development package is really there (on many Linux distros, one needs to install "-dev" packages in order to have all headers and libraries needed for compilation available, so header files are a good hint). In this case, for example, it would look for `/usr/local/include/libdate.h` and `/usr/include/libdate.h` on Unix. If you (or your users) have LibDate installed elsewhere, it's always possible to tell LuaRocks so through the command-line, passing for example `LIBDATE_DIR=/opt/libdate` as an argument.
 
-When LuaRocks succeeds finding an external dependency, it creates special variables for it which can be used in incdirs and libdirs fields. The example above shows two such variables, LIBDATE_INCDIR and LIBDATE_LIBDIR being use. It's important to always pass those variables: if LibDate happened to be in the system lookup path of your compiler, compilation would succeed without those variables, but they would fail in a user's system where they are somewhere else, such as in the LIBDATE_DIR=/opt/libdate example given earlier.
+When LuaRocks succeeds finding an external dependency, it creates special variables for it which can be used in incdirs and libdirs fields. The example above shows two such variables, `LIBDATE_INCDIR` and `LIBDATE_LIBDIR` being use. It's important to always pass those variables: if LibDate happened to be in the system lookup path of your compiler, compilation would succeed without those variables, but they would fail in a user's system where they are somewhere else, such as in the `LIBDATE_DIR=/opt/libdate` example given earlier.
 
 ### Using LuaRocks as a build system
 
@@ -192,6 +194,8 @@ git tag v1.0
 git push --tags
 ```
 
+Or use GitHub's "Releases" interface.
+
 LuaRocks also supports other source control management systems, such as CVS (cvs://), Subversion (svn://) and Mercurial (hg://).
 
 Don't worry about deployment complications when using this method. When you submit a rock for inclusion in the LuaRocks repository, a .src.rock file is generated which contains a copy of the source code, so LuaRocks users won't need to have Git or any other such tool installed to use your rock.
@@ -220,7 +224,7 @@ It's important to note that LuaRocks does not enforce the internal structure. Ou
 tar czvpf luafruits-1.0.tar.gz luafruits-1.0/
 ```
 
-And now we're ready to publish the tarball online. You can upload it to any public web server; if you need hosting space, you can create a project in [SourceForge](http://sf.net) or use the Pages feature from [GitHub](https://github.com). Your source section would then look something like this:
+And now we're ready to publish the tarball online. You can upload it to any public web server; if you need hosting space, you can use the Pages feature from [GitHub](https://github.com). Your source section would then look something like this:
 
 ```lua
 source = {
@@ -250,7 +254,7 @@ description = {
    license = "MIT/X11"
 }
 dependencies = {
-   "lua ~> 5.1",
+   "lua >= 5.1, < 5.4",
    "luaknife >= 2.3"
 }
 external_dependencies = {
