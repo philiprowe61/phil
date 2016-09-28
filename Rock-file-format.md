@@ -17,7 +17,7 @@ Note that there are different [[types of rocks]].
 
 ## Source rocks
 
-A binary rock must contain at its root the rockspec file. For a rock called `myrock-1.0-1.src.rock` it would be called:
+A source rock must contain at its root the rockspec file. For a rock called `myrock-1.0-1.src.rock` it would be called:
 
 * `myrock-1.0-1.rockspec` - the [rockspec file](Rockspec format) in the archive root
 
