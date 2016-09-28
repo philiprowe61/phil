@@ -1,6 +1,6 @@
 The `rock_manifest` file lists the files contained in a binary rock, with the MD5 checksum for each file.
 
-It is a Lua file containing a single global variable definition, that defines the variable `rock_manifest`, assigning to it a _table of file checksums_ of the archive file's root directory.
+It is a Lua file containing a single global variable definition, that defines the variable *rock_manifest*, assigning to it a _table of file checksums_ of the [archive file's root directory](Rock file format) (except for the `rock_manifest` file itself).
 
 A ''table of file checksums'' is defined as a table describing a directory, where for each entry in the directory, there is a key with its filename (only the basename).
 
