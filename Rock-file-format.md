@@ -6,12 +6,14 @@ Note that there are different [[types of rocks]].
 
 * .rock and .rockspec filenames must be all-lowercase
 * Rock names must follow the format "$NAME-$VERSION-$REVISION.$PLATFORM.rock", where:
-** $NAME is an arbitrary name (matchable via `"[a-z0-9_-]+"`)
-** $VERSION is a version number parseable by LuaRocks (e.g. "1.0", "2.1beta1", "scm" for git-HEAD/svn-master rockspecs)
-** $REVISION is the rockspec revision number, a positive integer
-** $PLATFORM must follow the format "$OS-$ARCH", where:
-*** $OS is an operating system identifier known by LuaRocks
-*** $ARCH is a hardware architecture identifier known by LuaRocks
+
+ * $NAME is an arbitrary name (matchable via `"[a-z0-9_-]+"`)
+ * $VERSION is a version number parseable by LuaRocks (e.g. "1.0", "2.1beta1", "scm" for git-HEAD/svn-master rockspecs)
+ * $REVISION is the rockspec revision number, a positive integer
+ * $PLATFORM must follow the format "$OS-$ARCH", where:
+
+    * $OS is an operating system identifier known by LuaRocks
+    * $ARCH is a hardware architecture identifier known by LuaRocks
 
 ## Source rocks
 
@@ -22,9 +24,9 @@ A binary rock must contain at its root the rockspec file. For a rock called `myr
 Additionally, it must contain the sources:
 
 * If the `source.url` field is specified using a file download protocol-type URL (`http://`, `https://`, `file://` and so on) pointing to the source archive (or source file in case of a single-file rock), the rock should contain the product of downloading this URL. 
-** For example, a source rock may contain two files: `myrock-1.0-1.rockspec` and `myrock-1.0.tar.gz`
+  * For example, a source rock may contain two files: `myrock-1.0-1.rockspec` and `myrock-1.0.tar.gz`
 * If the `source.url` field is specified using a Source Control Manager (SCM) protocol-type URL (`git://`, `hg://`, `svn://` and so on), the rock should contain the corresponding checked-out sources. The SCM metadata (e.g. the `.git` directory) does not need to be present. (Note: This is not specific to "scm" rocks that point to in-development repositories; a stable-version rockspec may use a SCM-based URL and an SCM tag with `source.tag` in the rockspec to point to a release version).
-** For example, a source rock may contain at the root the rockspec `myrock-1.0-1.rockspec` and a directory `myrock` that would be the result of `git clone https://github.com/example/myrock`
+  * For example, a source rock may contain at the root the rockspec `myrock-1.0-1.rockspec` and a directory `myrock` that would be the result of `git clone https://github.com/example/myrock`
 
 ## Binary rocks
 
