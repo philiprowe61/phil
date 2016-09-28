@@ -3,3 +3,4 @@ These pages are the reference specification for file formats used by LuaRocks. A
 * [[Rockspec format]] - Rockspecs are the files which contain rules explaining how rocks are built and installed as well as their dependencies and other metadata.
 * [[Config file format]] - The specification of the LuaRocks configuration file format, as it takes shape.
 * [[Manifest file format]] - The index file that describes a LuaRocks [[Rocks repositories|repository]], used by both rocks servers and rocks trees.
+* [[Rock file format]] - Reference to the .rock file format: the installable packages produced from [[Rockspec format|rockspecs]].
