@@ -44,6 +44,7 @@ These pages explain some concepts about LuaRocks:
 *** [[Platform overrides]] - How to add platform-specific parts in rockspecs.
 ** [[Config file format]] - The specification of the LuaRocks configuration file format, as it takes shape.
 ** [[Manifest file format]] - The index file that describes a LuaRocks [[Rocks repositories|servers and trees]].
+** [[Rock file format]] - Reference to the .rock file format: the installable packages produced from [[Rockspec format|rockspecs]].
 * [[File locations]] - The various locations of files installed and used by LuaRocks.
 * [[LuaRocks through a proxy]] - Configuring HTTP/FTP proxies for use with LuaRocks.
 * [[Development]] - Documentation related to the development of LuaRocks itself.
