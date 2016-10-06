@@ -1,3 +1,8 @@
+'''Version 2.4.1''' - 06/Oct/2016 - [http://luarocks.org/releases/luarocks-2.4.1.tar.gz All Unix] - [http://luarocks.org/releases/luarocks-2.4.1-win32.zip Windows]
+
+* Avoid coroutine use in luarocks.loader
+* Fix upgrade issues for very old versions
+
 '''Version 2.4.0''' - 08/Sep/2016 - [http://luarocks.org/releases/luarocks-2.4.0.tar.gz All Unix] - [http://luarocks.org/releases/luarocks-2.4.0-win32.zip Windows]
 
 * New test suite based on Busted; runs on Linux, OSX and Windows
