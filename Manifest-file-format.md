@@ -6,7 +6,7 @@ Like a rockspec, a manifest file contains a Lua program setting several globals.
   hosted on a server or installed in a rocks tree.
   * `repository[package_name]`: a table where each key is a package version (including revision, e.g. `1.0.0-1`)
   and its value provides information for that version.
-    * `repository[package_name][package_version]`: a table containing several fields:
+    * `repository[package_name][package_version]`: a list of tables containing several fields:
       * `arch`: architecture of the rock as a string. Always set to `installed` in rock tree manifests.
       * `modules` (only for rock tree manifests): a table mapping module names to paths under installation
         directory for Lua or C modules.
