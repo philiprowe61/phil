@@ -4,7 +4,7 @@ LuaRocks is a pure Lua application with no library dependencies. Its current rel
 
 == Downloading ==
 
-Download LuaRocks [http://keplerproject.github.io/luarocks/releases here].
+Download LuaRocks [https://keplerproject.github.io/luarocks/releases here].
 
 Current release is '''2.4.1''': see the [[Release history|release history]].
 
