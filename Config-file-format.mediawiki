@@ -30,6 +30,7 @@ The default value is platform-dependent; exact paths depend on flags given durin
 * '''platforms''' (array of string) - A list of string identifiers indicating which platform constraints can be satisfied by the running system. This is used for filtering commands on the LuaRocks build rules. This allows a more general platform definition such as "unix" when the same build commands are valid for all Unix variants, instead of enumerating all known valid arch entries, and at the same time using a more specific definition such as "macosx" when a platform-specific flag is used. This value is automatically filled according to the value of ''arch''.
 * '''external_deps_patterns''' (table) - Name patterns to be used when matching dependencies in a  [[Platform-agnostic external dependencies|portable way]].
 * '''runtime_external_deps_patterns''' (table) - Name patterns to be used by ''luarocks install'' when matching dependencies in a [[Platform-agnostic external dependencies|portable way]].
+* '''link_lua_explicitly'' (boolean) - Link the Lua library to the built modules when using the builtin mode (this is set to true for Cygwin).
 
 == Variables ==
 
