@@ -2,9 +2,9 @@ Documentation items related to the development of LuaRocks.
 
 == Implementation ==
 
-The implementation is documented using inline comments in [https://github.com/keplerproject/luadoc LuaDoc] format. You can [http://luarocks.luaforge.net/luadoc/ browse the generated documentation] online (very outdated).
+The internal implementation is documented using inline comments in [https://github.com/stevedonovan/ldoc LDoc] format.
 
-== Development docs ==
+== Historical development docs ==
 
 * [[To-do list]] – things yet to be done and/or defined.
 * [[Related work]] – A survey on build and deployment systems for other languages.
