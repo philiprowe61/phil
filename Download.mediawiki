@@ -1,6 +1,6 @@
 == Downloading ==
 
-Download LuaRocks [https://keplerproject.github.io/luarocks/releases here].
+Download LuaRocks [https://luarocks.github.io/luarocks/releases here].
 
 Current release is '''2.4.1''': see the [[Release history|release history]].
 
@@ -18,8 +18,8 @@ Once LuaRocks is installed, make sure to read the [[Documentation]] for more inf
 
 Development is done using Git. To get the latest development sources, run:
 
- git clone git://github.com/keplerproject/luarocks.git
+ git clone git://github.com/luarocks/luarocks.git
 
 There is also a web interface available at:
 
-* [http://github.com/keplerproject/luarocks]
+* [http://github.com/luarocks/luarocks]
