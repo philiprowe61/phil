@@ -2,7 +2,7 @@
 
 Download LuaRocks [https://luarocks.github.io/luarocks/releases here].
 
-Current release is '''2.4.1''': see the [[Release history|release history]].
+Current release is '''2.4.2''': see the [[Release history|release history]].
 
 == Installing ==
 
