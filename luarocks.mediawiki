@@ -1,4 +1,4 @@
-'''luarocks''' is the command-line interface for LuaRocks, a module deployment system for Lua.
+'''luarocks''' is the command-line interface for LuaRocks, the Lua package manager.
 
 == Usage ==
 

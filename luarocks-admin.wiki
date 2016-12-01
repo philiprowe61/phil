@@ -1,4 +1,4 @@
-'''luarocks-admin''' is the repository management tool for LuaRocks, a module deployment system for Lua.
+'''luarocks-admin''' is the repository management tool for LuaRocks, the Lua package manager.
 
 == Usage ==
 
