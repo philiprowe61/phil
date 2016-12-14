@@ -1,4 +1,4 @@
-First of all, get the [http://keplerproject.github.io/luarocks/releases latest "win32.zip" package here].
+First of all, get the [http://luarocks.github.io/luarocks/releases latest "win32.zip" package here].
 
 The LuaRocks package for Windows is an all-in-one package which includes
 everything you need to run LuaRocks, including helper binaries and a
