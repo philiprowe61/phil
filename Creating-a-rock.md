@@ -24,7 +24,7 @@ So, you wrote a Lua package (containing one or more modules) and want to make it
 
 ## Writing a rockspec
 
-A rockspec file is the metadata file for your package, containing all the information LuaRocks needs in order to fetch, build and install your package. The [[Rockspec format]] supports various kind of build systems, but in this tutorial we'll use LuaRocks's own built-in build system -- that's why we're listing "Writing a rockspec" as the first step. We'll use the rockspec in place of a Makefile.
+A rockspec file is the metadata file for your package, containing all the information LuaRocks needs in order to fetch, build and install your package. The [[Rockspec format]] supports various kinds of build systems, but in this tutorial we'll use LuaRocks' own built-in build system -- that's why we're listing "Writing a rockspec" as the first step. We'll use the rockspec in place of a Makefile.
 
 A rockspec is actually a Lua file, but it is loaded in an empty environment, so there are no Lua functions available. A skeleton for a basic rockspec looks can be written by hand or generated using [[write_rockspec]].
 It may look like this:
