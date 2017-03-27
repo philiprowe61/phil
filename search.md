@@ -2,7 +2,7 @@
 
 ## Usage
 
-`luarocks search [--procelain] [--source] [--binary] { <query> [<version>] | --all }`
+`luarocks search [--porcelain] [--source] [--binary] { <query> [<version>] | --all }`
 
 Lists files available on LuaRocks servers. `<query>` is a substring of a rock name to filter by.
 The search can be narrowed further narrowed down using a version. To list files for
