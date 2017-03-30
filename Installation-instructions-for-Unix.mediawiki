@@ -22,13 +22,13 @@ User accounts will be able to install their own rocks in their $HOME
 directory, and the superuser can install rocks that will be available
 for everyone.
 
-By default LuaRocks will install itself in /usr/local, like Lua, and
-will use /usr/local/etc/luarocks/config.lua as a default path for the configuration
-file. The default system-wide rocks trees is configured as /usr/local/lib/luarocks,
-and per-user rocks install at $HOME/.luarocks/rocks/.
+By default LuaRocks will install itself in `/usr/local`, like Lua, and
+will use `/usr/local/etc/luarocks/config.lua` as a default path for the configuration
+file. The default system-wide rocks trees is configured as `/usr/local/lib/luarocks`,
+and per-user rocks install at `$HOME/.luarocks/rocks/`.
 Command-line scripts provided by rocks will be installed in 
-/usr/local/lib/luarocks/bin/ or $HOME/.luarocks/bin/, respectively. The user
-may then add these directories to their $PATH variable.
+`/usr/local/lib/luarocks/bin/` or `$HOME/.luarocks/bin/`, respectively. The user
+may then add these directories to their `$PATH` variable.
 
 == Customizing your settings ==
 
@@ -42,7 +42,7 @@ or entries in the configuration file.
 |--------------------------------------------------------------------------------
 | --rocks-tree=FILE || Root of the local tree of installed rocks. Default is $PREFIX/lib/luarocks
 |--------------------------------------------------------------------------------
-| --scripts-dir=DIR || Where to install scripts installed by rocks. Default is $ROCKS_TREE/bin. Use this if you want to modify it so that rocks install scripts somewhere else (possibly somewhere in your $PATH), but if you use a system path such as /usr/bin, beware of clashes between files installed by LuaRocks and by your system's package manager. Example: /usr/local/bin. **Note**: I believe `--scripts-dir` flag was removed from 2.0.1 version. -- DanilKutkevich 2010-04-15 14:51 UTC
+| --scripts-dir=DIR || Where to install scripts installed by rocks. Default is $ROCKS_TREE/bin. Use this if you want to modify it so that rocks install scripts somewhere else (possibly somewhere in your $PATH), but if you use a system path such as `/usr/bin`, beware of clashes between files installed by LuaRocks and by your system's package manager. Example: `/usr/local/bin`. **Note**: I believe `--scripts-dir` flag was removed from 2.0.1 version. -- DanilKutkevich 2010-04-15 14:51 UTC
 |--------------------------------------------------------------------------------
 | --lua-suffix=SUFFIX || Versioning suffix to use in Lua filenames. Default is "" (lua...)
 |--------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ only with the URL replaced by a rocks tree in your own website.
 == Differently named Lua interpreters (e.g. LuaBinaries) ==
 
 To use LuaRocks with the LuaBinaries distribution, pass the option
---lua-suffix=5.1 to "configure". This adds the given suffix to the 
+`--lua-suffix=5.1` to "configure". This adds the given suffix to the 
 default value of <code>lua_interpreter</code> in the configuration file.
 If you want to use an alternative name to the interpreter, you can set
 that variable in your configuration file directly.
